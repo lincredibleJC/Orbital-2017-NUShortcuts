@@ -1,0 +1,1504 @@
+[  
+   {  
+      "Building":"7 Eleven",
+      "Rooms":[  
+         "7 Eleven"
+      ]
+   },
+   {  
+      "Building":"COM1",
+      "Rooms":[  
+         "Adaptive Computing Research Lab",
+         "Algorithms Research Lab",
+         "COM1",
+         "Computational Biology Research Lab",
+         "Computing",
+         "Database Research Lab 1",
+         "Database Research Lab 2",
+         "Department of Computer Science",
+         "Division of Graduate Studies (School of Computing)",
+         "Division of Research (School of Computing)",
+         "Electronic Commerce & Database Research Lab",
+         "Embedded Systems Research Lab 1",
+         "Embedded Systems Research Lab 2",
+         "Medical Computing Research Lab",
+         "Programming Languages & Systems Research Lab 1",
+         "School of Computing (Dean's Office)"
+      ]
+   },
+   {  
+      "Building":"University Cultural Centre",
+      "Rooms":[  
+         "Alcove.Asian Restaurant Bar",
+         "Dome",
+         "NUS Centre For the Arts",
+         "University Cultural Centre",
+         "NUS Museum"
+      ]
+   },
+   {  
+      "Building":"E3A",
+      "Rooms":[  
+         "Alice Lee Centre for Nursing Studies",
+         "Department of Materials Science & Engineering",
+         "Division of Bioengineering",
+         "Division of Engineering Technology Management",
+         "E3A",
+         "Engineering Science Programme",
+         "Security Post (E3A)",
+         "Solar Energy Research Institute of Singapore (SERIS)"
+      ]
+   },
+   {  
+      "Building":"Alumni Terrace",
+      "Rooms":[  
+         "Alumni Terrace",
+         "Faculty Square & Sculptures",
+         "The Confluence"
+      ]
+   },
+   {  
+      "Building":"Amphitheatre",
+      "Rooms":[  
+         "Amphitheatre"
+      ]
+   },
+   {  
+      "Building":"Stephen Riady Centre",
+      "Rooms":[  
+         "Butter My Buns",
+         "Bookhaven",
+         "Stephen Riady Centre",
+         "Fairprice Xpress",
+         "Flavours",
+         "Fortune Village",
+         "Guardian",
+         "Office of Admissions",
+         "Office of Financial Aid",
+         "Pizza Hut",
+         "University Town Management Office",
+         "DBS / POSBank ATMs (Stephen Riady Centre L1)",
+         "OCBC ATM (Stephen Riady Centre L1)",
+         "AXS (Stephen Riady Centre L1)"
+      ]
+   },
+   {  
+      "Building":"College of Alice & Peter Tan",
+      "Rooms":[  
+         "College of Alice & Peter Tan"
+      ]
+   },
+   {  
+      "Building":"MD1",
+      "Rooms":[  
+         "Animal Holding Unit",
+         "Lecture Theatre 37",
+         "MD1"
+      ]
+   },
+   {  
+      "Building":"MD4",
+      "Rooms":[  
+         "Antenatal Diagnostic Centre",
+         "Department of Microbiology",
+         "MD4"
+      ]
+   },
+   {  
+      "Building":"SDE3",
+      "Rooms":[  
+         "Architectural Studios",
+         "SDE3"
+      ]
+   },
+   {  
+      "Building":"Shaw Foundation Building",
+      "Rooms":[  
+         "Arts & Social Sciences"
+      ]
+   },
+   {  
+      "Building":"AS1",
+      "Rooms":[  
+         "AS1",
+         "Department of History",
+         "Department of Political Science",
+         "Department of Sociology"
+      ]
+   },
+   {  
+      "Building":"AS2",
+      "Rooms":[  
+         "AS2",
+         "Department of Economics",
+         "Department of Geography",
+         "Humble Origins",
+         "Singapore Centre for Applied and Policy Economics (SCAPE)"
+      ]
+   },
+   {  
+      "Building":"AS3",
+      "Rooms":[  
+         "AS3",
+         "Department of Philosophy",
+         "Department of Social Work",
+         "NUS Press",
+         "Southeast Asian Studies Programme"
+      ]
+   },
+   {  
+      "Building":"AS4",
+      "Rooms":[  
+         "AS4",
+         "Centre for Language Studies",
+         "Department of Japanese Studies",
+         "Department of Psychology"
+      ]
+   },
+   {  
+      "Building":"AS5",
+      "Rooms":[  
+         "AS5",
+         "Department of English Language & Literature"
+      ]
+   },
+   {  
+      "Building":"AS6",
+      "Rooms":[  
+         "AS6",
+         "Communications & New Media Programme",
+         "Computational Linguistics Research Lab",
+         "Computer Vision Research Lab",
+         "G^3 Lab",
+         "Industry Research Lab",
+         "Lab for Media Search",
+         "Multimedia Analysis and Synthesis Lab",
+         "Multimedia Systems Lab",
+         "Sensors Lab"
+      ]
+   },
+   {  
+      "Building":"AS7",
+      "Rooms":[  
+         "AS7",
+         "Department of Chinese Studies",
+         "Department of Malay Studies",
+         "Division of Research & Graduate Studies (Faculty of Arts & Social Sciences)",
+         "Faculty of Arts Social Sciences (Dean's Office)",
+         "Office of Programmes (Faculty of Arts & Social Sciences)",
+         "South Asian Studies Programme"
+      ]
+   },
+   {  
+      "Building":"Tower Block, BTC",
+      "Rooms":[  
+         "Asia Research Institute (ARI)",
+         "East Asian Institute (EAI)"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 27",
+      "Rooms":[  
+         "AXS Stations (LT27)",
+         "DBS / POSBank ATMs (LT27)",
+         "Lecture Theatre 27",
+         "Coop - Science LT 27 (Books and Sundries)"
+      ]
+   },
+   {  
+      "Building":"EA",
+      "Rooms":[  
+         "Bachelor of Technology Programme",
+         "Centre for Advanced Computations in Engineering Science (ACES)",
+         "Centre for Intelligent Control",
+         "Centre for Intelligent Products and Manufacturing Systems",
+         "Department of Mechanical Engineering",
+         "Division of Environmental Science & Engineering",
+         "EA",
+         "Engineering",
+         "Faculty of Engineering (Dean's Office)",
+         "Good News Cafe",
+         "Graduate Studies Office (Faculty of Engineering)",
+         "iFood",
+         "Mechatronics Programme",
+         "Professional Activities Centre (Faculty of Engineering)",
+         "Centre for Healthcare Innovation and Medical Engineering"
+      ]
+   },
+   {  
+      "Building":"S16",
+      "Rooms":[  
+         "Bio-Sciences Complex",
+         "Department of Statistics & Applied Probability",
+         "Division of Research & Graduate Studies (Faculty of Sciences)",
+         "Faculty of Science (Dean's Office)",
+         "S16",
+         "Science",
+         "Security Post (Bio-Sciences Complex)",
+         "UOB ATMs (S16, near Science Canteen)",
+         "Playtypus Food Bar"
+      ]
+   },
+   {  
+      "Building":"Centre for Life Sciences",
+      "Rooms":[  
+         "Bioinformatics Centre",
+         "Cancer Science Institute of Singapore",
+         "Life Sciences Institute (LSI)",
+         "NUS Graduate School for Integrative Sciences & Engineering",
+         "Office of Life Sciences",
+         "Singapore Institute for Neurotechnology"
+      ]
+   },
+   {  
+      "Building":"BIZ1",
+      "Rooms":[  
+         "BIZ1",
+         "Business",
+         "Business School (Dean's Office)",
+         "Department of Accounting",
+         "Department of Decision Sciences",
+         "Department of Finance",
+         "Department of Management & Organisation",
+         "Department of Marketing",
+         "Department of Strategy & Policy",
+         "Division of Research & Graduate Studies (NUS Business School)",
+         "Human Resource Management Unit (NUS Business School)",
+         "Reedz Cafe (Mochtar Riady Building)"
+      ]
+   },
+   {  
+      "Building":"BIZ2",
+      "Rooms":[  
+         "BIZ2",
+         "Saw Centre for Financial Studies",
+         "Saw Centre for Quantitative Finance"
+      ]
+   },
+   {  
+      "Building":"Block B, BTC",
+      "Rooms":[  
+         "Bukit Timah Campus Management Office",
+         "Centre for International Law (CIL)",
+         "Faculty of Law (Block B)",
+         "Institute of South Asian Studies (ISAS)",
+         "Middle East Institute (MEI)",
+         "The Summit",
+         "DBS / POSBank ATMs (Bukit Timah Campus)",
+         "AXS (Bukit Timah Campus)",
+         "Coop - Bukit Timah Campus (Block B)"
+      ]
+   },
+   {  
+      "Building":"C J Koh Law Library",
+      "Rooms":[  
+         "C J Koh Law Library"
+      ]
+   },
+   {  
+      "Building":"Central Library",
+      "Rooms":[  
+         "Central Library",
+         "DBS / POSBank ATMs (Forum L1, Near NUS Co-op)",
+         "UOB ATM (Forum L1, Near NUS Co-op)",
+         "AXS (Forum L1, Near NUS Co-op)",
+         "Coop - Central Library Forum (Books and Sundries)"
+      ]
+   },
+   {  
+      "Building":"University Hall",
+      "Rooms":[  
+         "Central Procurement Unit",
+         "Investment Office",
+         "NUS (Suzhou) Research Institute Liaison Office",
+         "NUS-Fudan Joint Graduate School",
+         "Office of Corporate Compliance",
+         "Office of Corporate Relations",
+         "Office of Financial Services",
+         "Office of Human Resources",
+         "Office of Internal Audit",
+         "Office of Investment",
+         "Office of Legal Affairs",
+         "Organisational Excellence Office",
+         "Office of Resource Planning",
+         "Office of Risk Management",
+         "Office of the Deputy President (Administration)",
+         "Office of the Deputy President (Research & Technology)",
+         "Office of the President",
+         "Office of the Provost",
+         "Office of the Vice President (University & Global Relations)",
+         "Registrar's Office",
+         "Security Post (University Hall)",
+         "Spinelli",
+         "University Hall",
+         "Singapore Nuclear Research and Safety Initiative"
+      ]
+   },
+   {  
+      "Building":"E5",
+      "Rooms":[  
+         "Centre for Advanced Chemical Engineering",
+         "Department of Chemical & Biomolecular Engineering",
+         "E5",
+         "Security Post (Engineering Block)"
+      ]
+   },
+   {  
+      "Building":"MD11",
+      "Rooms":[  
+         "Centre for Biomedical Ethics",
+         "Department of Pharmacology",
+         "MD11",
+         "National University Medical Institutes",
+         "School of Medicine (Dean's Office)",
+         "Starbucks (MD11)"
+      ]
+   },
+   {  
+      "Building":"E1A",
+      "Rooms":[  
+         "Centre for Construction Materials and Technology",
+         "Centre for Offshore Research & Engineering",
+         "Centre for Transportation Research",
+         "Department of Civil Engineering",
+         "Department of Industrial & Systems Engineering",
+         "E1A",
+         "Engineering Design and Innovation Centre"
+      ]
+   },
+   {  
+      "Building":"E4",
+      "Rooms":[  
+         "Centre for Design Technology",
+         "Centre for Microwave and Radio Frequency",
+         "Department of Electrical & Computer Engineering",
+         "E4",
+         "Incubation Centre (Faculty of Engineering)",
+         "AXS (E4)"
+      ]
+   },
+   {  
+      "Building":"Central Library Annexe",
+      "Rooms":[  
+         "Centre for Development of Teaching & Learning",
+         "Centre for Instructional Technology (Central Library Annexe)"
+      ]
+   },
+   {  
+      "Building":"COM2",
+      "Rooms":[  
+         "Centre for e-Business",
+         "COM2",
+         "Department of Information Systems",
+         "Information Technology Unit (School of Computing)",
+         "Security Post (School of Computing)"
+      ]
+   },
+   {  
+      "Building":"CELC",
+      "Rooms":[  
+         "Centre for English Language Communication"
+      ]
+   },
+   {  
+      "Building":"MD3",
+      "Rooms":[  
+         "Centre for Environmental and Occupational Health Research",
+         "Centre for Molecular Epidemiology",
+         "Department of Epidemiology & Public Health",
+         "MD3",
+         "Occupational Health",
+         "Para-clinical Laboratory",
+         "Pre-clinical Laboratory",
+         "Public Health",
+         "WHO Collaborating Centre for Occupational Health"
+      ]
+   },
+   {  
+      "Building":"S14",
+      "Rooms":[  
+         "Centre for Industrial Mathematics",
+         "Department of Mathematics (S14)",
+         "S14",
+         "Centre for Advanced 2D Materials"
+      ]
+   },
+   {  
+      "Building":"Computer Centre",
+      "Rooms":[  
+         "Centre for Instructional Technology (Computer Centre)",
+         "Computer Centre"
+      ]
+   },
+   {  
+      "Building":"E3",
+      "Rooms":[  
+         "Centre for Integrated Circuit Failure Analysis and Reliability",
+         "Centre for Optoelectronics",
+         "Centre for Power Electronics",
+         "E3",
+         "NUS Nanoscience and Nanotechnology Institute (E3)",
+         "Technopreneurship Incubation Programme"
+      ]
+   },
+   {  
+      "Building":"S7",
+      "Rooms":[  
+         "Centre for Ion Beam Applications",
+         "Department of Chemistry (S7)",
+         "Department of Physics (S7)",
+         "S7"
+      ]
+   },
+   {  
+      "Building":"Centre for Maritime Studies",
+      "Rooms":[  
+         "Centre for Maritime Studies (CMS)"
+      ]
+   },
+   {  
+      "Building":"SDE2",
+      "Rooms":[  
+         "Centre for Project Management & Construction Law",
+         "Design Incubation Centre",
+         "SDE2"
+      ]
+   },
+   {  
+      "Building":"S15",
+      "Rooms":[  
+         "Centre for Quantum Technologies",
+         "S15"
+      ]
+   },
+   {  
+      "Building":"SDE1",
+      "Rooms":[  
+         "Centre for Real Estate Studies",
+         "Centre for Total Building Performance",
+         "Department of Architecture",
+         "Department of Building",
+         "Department of Real Estate",
+         "Design & Environment",
+         "Division of Research & Graduate Studies (School of Design & Environment)",
+         "Energy Sustainability Unit",
+         "Information Resource Centre (School of Design & Environment)",
+         "School of Design & Environment (Dean's Office)",
+         "SDE1",
+         "Coop - SDE (Block SDE1)"
+      ]
+   },
+   {  
+      "Building":"S17",
+      "Rooms":[  
+         "Centre for Remote Imaging, Sensing and Processing (CRISP)",
+         "Department of Mathematics (S17)",
+         "Global Asia Institute (GAI)",
+         "S17",
+         "NUS Global Asia Institute"
+      ]
+   },
+   {  
+      "Building":"E1",
+      "Rooms":[  
+         "Centre for Soft-ground Engineering",
+         "E1",
+         "Engineering IT Unit",
+         "Temasek Defence Systems Institute"
+      ]
+   },
+   {  
+      "Building":"S12",
+      "Rooms":[  
+         "Centre for Superconducting and Magnetic Materials",
+         "S12"
+      ]
+   },
+   {  
+      "Building":"S13",
+      "Rooms":[  
+         "Centre for Wavelets Approximation & Information Processing",
+         "Department of Physics (S13)",
+         "S13",
+         "Surface Science Laboratory"
+      ]
+   },
+   {  
+      "Building":"S8",
+      "Rooms":[  
+         "Chemical, Molecular and Materials Analysis Centre",
+         "Department of Chemistry (S8)",
+         "S8"
+      ]
+   },
+   {  
+      "Building":"Create Tower",
+      "Rooms":[  
+         "Cheers Convenience Store",
+         "Create Tower",
+         "Koufu",
+         "Subway (University Town)"
+      ]
+   },
+   {  
+      "Building":"Chinese Library",
+      "Rooms":[  
+         "Chinese Library"
+      ]
+   },
+   {  
+      "Building":"Chua Thian Poh Hall",
+      "Rooms":[  
+         "Chua Thian Poh Hall"
+      ]
+   },
+   {  
+      "Building":"Cinnamon College",
+      "Rooms":[  
+         "Cinnamon College",
+         "University Scholars Programme"
+      ]
+   },
+   {  
+      "Building":"Cinnamon South Learn Lobe",
+      "Rooms":[  
+         "Cinnamon South Learn Lobe"
+      ]
+   },
+   {  
+      "Building":"Cinnamon West Learn Lobe",
+      "Rooms":[  
+         "Cinnamon West Learn Lobe",
+         "University Scholars Programme Office"
+      ]
+   },
+   {  
+      "Building":"NUH",
+      "Rooms":[  
+         "Clinic for Human Reproduction",
+         "Dental Centre",
+         "Department of Anaesthesia",
+         "Department of Diagnostic Radiology",
+         "Department of Medicine",
+         "Department of Obstetrics & Gynaecology",
+         "Department of Ophthalmology",
+         "Department of Orthopaedic Surgery",
+         "Department of Otolaryngology",
+         "Department of Paediatrics",
+         "Department of Pathology",
+         "Department of Psychological Medicine",
+         "Department of Surgery",
+         "Maternal & Child Health/Family Planning Services, Research & Training",
+         "Minimally-Invasive Surgical Centre",
+         "Orthopaedic Diagnostic Centre",
+         "Research in Human Reproduction"
+      ]
+   },
+   {  
+      "Building":"Coffee Club Express",
+      "Rooms":[  
+         "Coffee Club Express"
+      ]
+   },
+   {  
+      "Building":"Coffee Grounds",
+      "Rooms":[  
+         "Coffee Grounds"
+      ]
+   },
+   {  
+      "Building":"Continuing and Lifelong Education",
+      "Rooms":[  
+         "Continuing and Lifelong Education"
+      ]
+   },
+   {  
+      "Building":"Create",
+      "Rooms":[  
+         "Create",
+         "Hwang's Korean Restaurant",
+         "Sapore Italiano (University Town)"
+      ]
+   },
+   {  
+      "Building":"Data Storage Institute",
+      "Rooms":[  
+         "Data Storage Institute"
+      ]
+   },
+   {  
+      "Building":"Yusof Ishak House",
+      "Rooms":[  
+         "DBS / POSBank ATMs (Yusof Ishak House)",
+         "DBS / POSBank Cash Deposit Machine (Yusof Ishak House)",
+         "NUSSU Secretariat (Students' Union)",
+         "Office of Student Affairs",
+         "Starbucks (Yusof Ishak House)",
+         "Student Service Centre",
+         "OCBC ATM (Yusoff Ishak House)",
+         "Centre for Future-ready Graduates"
+      ]
+   },
+   {  
+      "Building":"Faculty of Dentistry",
+      "Rooms":[  
+         "Dentistry",
+         "Department of Oral & Maxillofacial Surgery",
+         "Department of Preventive Dentistry",
+         "Department of Restorative Dentistry",
+         "Division of Graduate Dental Studies",
+         "Faculty of Dentistry (Dean's Office)"
+      ]
+   },
+   {  
+      "Building":"MD10",
+      "Rooms":[  
+         "Department of Anatomy",
+         "MD10"
+      ]
+   },
+   {  
+      "Building":"MD7",
+      "Rooms":[  
+         "Department of Biochemistry",
+         "MD7"
+      ]
+   },
+   {  
+      "Building":"MD4A",
+      "Rooms":[  
+         "Department of Biochemistry (Annexe)",
+         "MD4A",
+         "National Malaria Reference Centre",
+         "National Hepatitis Quality Assurance Centre",
+         "Research & Training in Immunology"
+      ]
+   },
+   {  
+      "Building":"S1",
+      "Rooms":[  
+         "Department of Biological Sciences (S1)",
+         "S1"
+      ]
+   },
+   {  
+      "Building":"S1A",
+      "Rooms":[  
+         "Department of Biological Sciences (S1A)",
+         "Department of Physics (S1A)"
+      ]
+   },
+   {  
+      "Building":"S2",
+      "Rooms":[  
+         "Department of Biological Sciences (S2)",
+         "S2"
+      ]
+   },
+   {  
+      "Building":"S3",
+      "Rooms":[  
+         "Department of Biological Sciences (S3)",
+         "Department of Chemistry (S3)",
+         "Department of Pharmacy (S3)",
+         "Protein and Proteomics Centre",
+         "S3"
+      ]
+   },
+   {  
+      "Building":"S5",
+      "Rooms":[  
+         "Department of Chemistry (S5)",
+         "S5"
+      ]
+   },
+   {  
+      "Building":"S9",
+      "Rooms":[  
+         "Department of Chemistry (S9)",
+         "S9"
+      ]
+   },
+   {  
+      "Building":"S4",
+      "Rooms":[  
+         "Department of Pharmacy (S4)",
+         "GEA-NUS Pharmaceutical Processing Research Laboratory",
+         "S4"
+      ]
+   },
+   {  
+      "Building":"S4A",
+      "Rooms":[  
+         "Department of Pharmacy (Annexe)",
+         "S4A"
+      ]
+   },
+   {  
+      "Building":"S11",
+      "Rooms":[  
+         "Department of Physics (S11)",
+         "Department of Physics (S12)",
+         "S11"
+      ]
+   },
+   {  
+      "Building":"MD9",
+      "Rooms":[  
+         "Department of Physiology",
+         "MD9"
+      ]
+   },
+   {  
+      "Building":"E2A",
+      "Rooms":[  
+         "Des The Place"
+      ]
+   },
+   {  
+      "Building":"Shaw Foundation Alumni House",
+      "Rooms":[  
+         "Development Office",
+         "International Relations Office",
+         "Late Plate",
+         "Office of Alumni Relations",
+         "Shaw Foundation Alumni House",
+         "The University Club",
+         "Waa Cow"
+      ]
+   },
+   {  
+      "Building":"House 15",
+      "Rooms":[  
+         "Development Office (House 15)"
+      ]
+   },
+   {  
+      "Building":"Dilys Creation (Engineering)",
+      "Rooms":[  
+         "Dilys Creation (Engineering)"
+      ]
+   },
+   {  
+      "Building":"Dilys Creation (Science)",
+      "Rooms":[  
+         "Dilys Creation (Science)"
+      ]
+   },
+   {  
+      "Building":"MD5",
+      "Rooms":[  
+         "Division of Graduate Medical Studies",
+         "Electron Microscopy Unit",
+         "MD5"
+      ]
+   },
+   {  
+      "Building":"Duke-NUS Graduate Medical School",
+      "Rooms":[  
+         "Duke-NUS Graduate Medical School"
+      ]
+   },
+   {  
+      "Building":"Prince George's Park Residences",
+      "Rooms":[  
+         "E-Canteen",
+         "Prince George's Park Residences",
+         "Route 77 Café",
+         "Supersnacks",
+         "AXS (PGPR)"
+      ]
+   },
+   {  
+      "Building":"E2",
+      "Rooms":[  
+         "E2",
+         "A.R.T. FoodHouse"
+      ]
+   },
+   {  
+      "Building":"E4A",
+      "Rooms":[  
+         "E4A"
+      ]
+   },
+   {  
+      "Building":"Education Resource Centre",
+      "Rooms":[  
+         "Education Resource Centre",
+         "Security Post (Education Resource Centre)",
+         "Starbucks (University Town)"
+      ]
+   },
+   {  
+      "Building":"Blk A, 29 Heng Mui Keng Terrace",
+      "Rooms":[  
+         "Energy Studies Institute (ESI)"
+      ]
+   },
+   {  
+      "Building":"Eusoff Hall",
+      "Rooms":[  
+         "Eusoff Hall"
+      ]
+   },
+   {  
+      "Building":"EW1",
+      "Rooms":[  
+         "EW1"
+      ]
+   },
+   {  
+      "Building":"EW2",
+      "Rooms":[  
+         "EW2",
+         "Information Storage Materials Laboratory"
+      ]
+   },
+   {  
+      "Building":"The Deck",
+      "Rooms":[  
+         "Ez-Online Station (The Deck, Level 2)",
+         "Lerk Thai Bistro",
+         "Liang Ban Kung Fu",
+         "Sapore Italiano (Arts and Social Sciences)",
+         "The Deck Canteen"
+      ]
+   },
+   {  
+      "Building":"Federal, BTC",
+      "Rooms":[  
+         "Faculty of Law (Federal)"
+      ]
+   },
+   {  
+      "Building":"Eu Tong Sen, BTC",
+      "Rooms":[  
+         "Faculty of Law (Eu Tong Sen)"
+      ]
+   },
+   {  
+      "Building":"Central Square",
+      "Rooms":[  
+         "Food Junction"
+      ]
+   },
+   {  
+      "Building":"Frontier",
+      "Rooms":[  
+         "Frontier Canteen",
+         "OCBC ATM (LT27, Near Frontier Canteen)",
+         "AXS (LT27, Near Frontier Canteen)"
+      ]
+   },
+   {  
+      "Building":"University Health Centre",
+      "Rooms":[  
+         "Health Wellness & Counselling Centre",
+         "University Health Centre"
+      ]
+   },
+   {  
+      "Building":"Hon Sui Sen Memorial Library",
+      "Rooms":[  
+         "Hon Sui Sen Memorial Library"
+      ]
+   },
+   {  
+      "Building":"I Was Here Art Piece",
+      "Rooms":[  
+         "I Was Here Art Piece"
+      ]
+   },
+   {  
+      "Building":"I3",
+      "Rooms":[  
+         "Incubation Centre (School of Computing)",
+         "Institute of Real Estate Studies (IRES)",
+         "Interactive and Digital Media Institute (IDMI)",
+         "NUS Enterprise",
+         "NUS Entrepreneurship Centre",
+         "NUS Industry Liaison Office",
+         "NUS Overseas Colleges",
+         "NUS Technology Holdings",
+         "Risk Management Institute (RMI)",
+         "The Logistics Institute - Asia Pacific (TLI - Asia Pacific)"
+      ]
+   },
+   {  
+      "Building":"MD6",
+      "Rooms":[  
+         "Integrative Sciences & Engineering",
+         "Dily's Creation",
+         "Lecture Theatre 35",
+         "Lecture Theatre 36",
+         "MD6",
+         "Medicine"
+      ]
+   },
+   {  
+      "Building":"Institute of Materials Research & Engineering",
+      "Rooms":[  
+         "Institute of Materials Research & Engineering"
+      ]
+   },
+   {  
+      "Building":"House 3",
+      "Rooms":[  
+         "Institute of Mathematical Sciences (House 3)"
+      ]
+   },
+   {  
+      "Building":"House 4",
+      "Rooms":[  
+         "Institute of Mathematical Sciences (House 4)"
+      ]
+   },
+   {  
+      "Building":"House 5, BTC",
+      "Rooms":[  
+         "Institute of Policy Studies"
+      ]
+   },
+   {  
+      "Building":"Institute of Systems Science",
+      "Rooms":[  
+         "Institute of Systems Science (ISS)"
+      ]
+   },
+   {  
+      "Building":"KE VII Hall",
+      "Rooms":[  
+         "King Edward VII Hall"
+      ]
+   },
+   {  
+      "Building":"Kent Ridge Guild House",
+      "Rooms":[  
+         "Kent Ridge Guild House",
+         "NUS Society"
+      ]
+   },
+   {  
+      "Building":"Kent Ridge Hall",
+      "Rooms":[  
+         "Kent Ridge Hall"
+      ]
+   },
+   {  
+      "Building":"Kuok Foundation House",
+      "Rooms":[  
+         "Kuok Foundation House"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 1",
+      "Rooms":[  
+         "Lecture Theatre 1"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 2",
+      "Rooms":[  
+         "Lecture Theatre 2"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 3",
+      "Rooms":[  
+         "Lecture Theatre 3"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 4",
+      "Rooms":[  
+         "Lecture Theatre 4"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 5",
+      "Rooms":[  
+         "Lecture Theatre 5"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 6",
+      "Rooms":[  
+         "Lecture Theatre 6"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 7",
+      "Rooms":[  
+         "Lecture Theatre 7"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 7A",
+      "Rooms":[  
+         "Lecture Theatre 7A"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 8",
+      "Rooms":[  
+         "Lecture Theatre 8"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 9",
+      "Rooms":[  
+         "Lecture Theatre 9",
+         "OCBC ATM (Near to LT9)"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 10",
+      "Rooms":[  
+         "Lecture Theatre 10"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 11",
+      "Rooms":[  
+         "Lecture Theatre 11"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 12",
+      "Rooms":[  
+         "Lecture Theatre 12"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 13",
+      "Rooms":[  
+         "Lecture Theatre 13"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 14",
+      "Rooms":[  
+         "Lecture Theatre 14"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 15",
+      "Rooms":[  
+         "Lecture Theatre 15"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 16",
+      "Rooms":[  
+         "Lecture Theatre 16"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 17",
+      "Rooms":[  
+         "Lecture Theatre 17"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 18",
+      "Rooms":[  
+         "Lecture Theatre 18"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 19",
+      "Rooms":[  
+         "Lecture Theatre 19"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 20",
+      "Rooms":[  
+         "Lecture Theatre 20"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 21",
+      "Rooms":[  
+         "Lecture Theatre 21"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 22",
+      "Rooms":[  
+         "Lecture Theatre 22"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 23",
+      "Rooms":[  
+         "Lecture Theatre 23"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 24",
+      "Rooms":[  
+         "Lecture Theatre 24"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 25",
+      "Rooms":[  
+         "Lecture Theatre 25"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 26",
+      "Rooms":[  
+         "Lecture Theatre 26"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 28",
+      "Rooms":[  
+         "Lecture Theatre 28"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 29",
+      "Rooms":[  
+         "Lecture Theatre 29"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 31",
+      "Rooms":[  
+         "Lecture Theatre 31"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 32",
+      "Rooms":[  
+         "Lecture Theatre 32"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 33",
+      "Rooms":[  
+         "Lecture Theatre 33"
+      ]
+   },
+   {  
+      "Building":"Lecture Theatre 34",
+      "Rooms":[  
+         "Lecture Theatre 34"
+      ]
+   },
+   {  
+      "Building":"Li Ka Shing, BTC",
+      "Rooms":[  
+         "Lee Kuan Yew School of Public Policy (Li Ka Shing)",
+         "Reedz Cafe (Li Ka Shing Building)",
+         "Sapore Italiano (Bukit Timah)"
+      ]
+   },
+   {  
+      "Building":"Manasseh Meyer, BTC",
+      "Rooms":[  
+         "Lee Kuan Yew School of Public Policy (Manasseh Meyer)"
+      ]
+   },
+   {  
+      "Building":"Oei Tiong Ham, BTC",
+      "Rooms":[  
+         "Lee Kuan Yew School of Public Policy (Oei Tiong Ham)"
+      ]
+   },
+   {  
+      "Building":"Lovers' Park",
+      "Rooms":[  
+         "Lovers' Park"
+      ]
+   },
+   {  
+      "Building":"McDonald's",
+      "Rooms":[  
+         "McDonald's"
+      ]
+   },
+   {  
+      "Building":"MD2",
+      "Rooms":[  
+         "MD2"
+      ]
+   },
+   {  
+      "Building":"T-Lab",
+      "Rooms":[  
+         "Mechanobiology Institute, Singapore",
+         "NUS Environmental Research Institute (NERI)",
+         "Temasek Laboratories (TL@NUS)"
+      ]
+   },
+   {  
+      "Building":"Medical Library",
+      "Rooms":[  
+         "Medical Library"
+      ]
+   },
+   {  
+      "Building":"Munchie Monkey",
+      "Rooms":[  
+         "Munchie Monkey"
+      ]
+   },
+   {  
+      "Building":"Conservatory of Music",
+      "Rooms":[  
+         "Music",
+         "Yong Siew Toh Conservatory of Music"
+      ]
+   },
+   {  
+      "Building":"Music Library",
+      "Rooms":[  
+         "Music Library"
+      ]
+   },
+   {  
+      "Building":"Museum",
+      "Rooms":[  
+         "NUS Museum"
+      ]
+   },
+   {  
+      "Building":"Staff Club",
+      "Rooms":[  
+         "NUS Staff Club"
+      ]
+   },
+   {  
+      "Building":"Ventus",
+      "Rooms":[  
+         "Office of Campus Amenities",
+         "Office of Estate Development",
+         "Office of Environmental Sustainability",
+         "Office of Facilities Management",
+         "Office of Safety, Health & Environment",
+         "Office of the Vice President (Campus Infrastructure)",
+         "Ventus"
+      ]
+   },
+   {  
+      "Building":"House 17",
+      "Rooms":[  
+         "Office of Campus Security (House 17)"
+      ]
+   },
+   {  
+      "Building":"House 18",
+      "Rooms":[  
+         "Office of Campus Security (House 18)",
+         "Security Post (Prince George's Park)"
+      ]
+   },
+   {  
+      "Building":"Old Chang Kee",
+      "Rooms":[  
+         "Old Chang Kee"
+      ]
+   },
+   {  
+      "Building":"Raffles Hall",
+      "Rooms":[  
+         "Raffles Hall"
+      ]
+   },
+   {  
+      "Building":"Residential College 4",
+      "Rooms":[  
+         "Residential College 4"
+      ]
+   },
+   {  
+      "Building":"Ridge View Residences",
+      "Rooms":[  
+         "Ridge View Residences"
+      ]
+   },
+   {  
+      "Building":"Ridge View Tower Block",
+      "Rooms":[  
+         "Ridge View Tower Block"
+      ]
+   },
+   {  
+      "Building":"S6",
+      "Rooms":[  
+         "S6"
+      ]
+   },
+   {  
+      "Building":"S9A",
+      "Rooms":[  
+         "S9A"
+      ]
+   },
+   {  
+      "Building":"S10",
+      "Rooms":[  
+         "S10"
+      ]
+   },
+   {  
+      "Building":"Science Library",
+      "Rooms":[  
+         "Science Library"
+      ]
+   },
+   {  
+      "Building":"Security Post, BTC",
+      "Rooms":[  
+         "Security Post (Bukit Timah Campus)"
+      ]
+   },
+   {  
+      "Building":"Sheares Hall",
+      "Rooms":[  
+         "Sheares Hall"
+      ]
+   },
+   {  
+      "Building":"Singapore Synchrotron Light Source",
+      "Rooms":[  
+         "Singapore Synchrotron Light Source (SSLS)"
+      ]
+   },
+   {  
+      "Building":"Town Plaza",
+      "Rooms":[  
+         "Spice Table by Pines",
+         "Town Plaza",
+         "The Royals Bistro"
+      ]
+   },
+   {  
+      "Building":"Sports and Recreation Centre",
+      "Rooms":[  
+         "Sports and Recreation Centre"
+      ]
+   },
+   {  
+      "Building":"Subway",
+      "Rooms":[  
+         "Subway (Yusof Ishak House)"
+      ]
+   },
+   {  
+      "Building":"Techno Edge",
+      "Rooms":[  
+         "Techno Edge Canteen",
+         "DBS / POSBank ATMs (TechnoEdge Canteen)"
+      ]
+   },
+   {  
+      "Building":"Temasek Hall",
+      "Rooms":[  
+         "Temasek Hall"
+      ]
+   },
+   {  
+      "Building":"Tembusu College",
+      "Rooms":[  
+         "Tembusu College"
+      ]
+   },
+   {  
+      "Building":"Tembusu Multi-purpose Hall",
+      "Rooms":[  
+         "Tembusu Multi-purpose Hall"
+      ]
+   },
+   {  
+      "Building":"Tembusu West Learn Lobe",
+      "Rooms":[  
+         "Tembusu West Learn Lobe"
+      ]
+   },
+   {  
+      "Building":"The Grinning Gecko",
+      "Rooms":[  
+         "The Grinning Gecko"
+      ]
+   },
+   {  
+      "Building":"The Kent Ridge Heritage Trail Entrance",
+      "Rooms":[  
+         "The Kent Ridge Heritage Trail Entrance"
+      ]
+   },
+   {  
+      "Building":"The Ngee Ann Kongsi Auditorium",
+      "Rooms":[  
+         "The Ngee Ann Kongsi Auditorium"
+      ]
+   },
+   {  
+      "Building":"The Olive Cove",
+      "Rooms":[  
+         "The Olive Cove"
+      ]
+   },
+   {  
+      "Building":"The Pavilion Cafe",
+      "Rooms":[  
+         "The Pavilion Cafe"
+      ]
+   },
+   {  
+      "Building":"The Terrace",
+      "Rooms":[  
+         "The Terrace Canteen",
+         "DBS / POSBank ATMs (Near Terrace Canteen)",
+         "AXS (Near Terrace Canteen)"
+      ]
+   },
+   {  
+      "Building":"Town Green",
+      "Rooms":[  
+         "Town Green"
+      ]
+   },
+   {  
+      "Building":"S2S",
+      "Rooms":[  
+         "Tropical Marine Science Institute (TMSI)"
+      ]
+   },
+   {  
+      "Building":"UTown Residence North Tower",
+      "Rooms":[  
+         "UTown Residence North Tower"
+      ]
+   },
+   {  
+      "Building":"UTown Residence South Tower",
+      "Rooms":[  
+         "UTown Residence South Tower"
+      ]
+   },
+   {  
+      "Building":"Wealth and Contentment",
+      "Rooms":[  
+         "Wealth and Contentment"
+      ]
+   },
+   {  
+      "Building":"Yale-NUS College",
+      "Rooms":[  
+         "Yale-NUS College"
+      ]
+   },
+   {  
+      "Building":"Lee Kong Chian Natural History Museum",
+      "Rooms":[  
+
+      ]
+   }
+]

@@ -26,7 +26,7 @@ function addVertex(){
 			'locationType': locationType,
 			'latlongCoordinates': [parseFloat(latlong[0]),parseFloat(latlong[1])],
 			'roomList': [],
-			'edgeList': {}
+			'edges': {}
 		};
 		
 		console.log( vertName + " : " + JSON.stringify(fullMap[vertName]));
@@ -87,7 +87,6 @@ function readMap(){
 }
 
 
-
 /////////////////////////////
 //Paired Edges CRUD methods//
 /////////////////////////////
@@ -98,22 +97,15 @@ function areVertexesLinked(name1,name2){
 	var one = false;
 	var two = false;
 	
-	for(item in vertexArr){
-		for (edge in vertexArr[item].edgeList){
-			if(vertexArr[item].vertex === name1 && vertexArr[item].edgeList[edge].destination === name2){
-				one = true;	
-			}
-		}
+	if (fullMap[name1] && fullMap[name1].edges[name2]){	
+		one = true;
 	}
-	for(item in vertexArr){
-		for (edge in vertexArr[item].edgeList){
-			if(vertexArr[item].vertex === name2 && vertexArr[item].edgeList[edge].destination === name1){
-				two = true;
-			}
-		}
+	if (fullMap[name2] && fullMap[name2].edges[name1]){	
+		two = true;
 	}
-	console.log("vertex 1 exists " + one);
-	console.log("vertex 1 exists " + two);
+	
+	console.log("name1" +  " to " + name2 +  " exists " + one);
+	console.log("name2" +  " to " + name1 +  " exists " + two);
 	return one && two;
 }
 
@@ -131,56 +123,49 @@ function addEdges(){
 		var stairsDirection = parseFloat(prompt("number of flights of stairs diff\ndown 0, flat ground 1, up 2, \ndefault is flat ground", 1 ));
 		var shelterMultiplier = parseFloat(prompt("shelter 0 for sheltered, 1 not sheltered\n default is sheltered ", 0 ));
 		
-		//find name1 
-		for(item in vertexArr){
-			if(vertexArr[item].vertex === name1){
-				
-				var weightedStairs = (stairsDirection=== 2 ) ? stairsDirection * distance : distance;
+		//from name 1 to name 2 			
+		var weightedStairs = (stairsDirection=== 2 ) ? stairsDirection * distance : distance;
 
-				//add forward direction edge
-				vertexArr[item].edgeList.push({
-					'destination': name2,
-					'time': distance/walkingSpeed/60,
-					'distance': distance,
-					'stairsWeight': weightedStairs,
-					'stairsDirection':stairsDirection,
-					'shelterRating': shelterMultiplier * distance,
-					'shelterMultiplier': shelterMultiplier,
-					'directions': 'Insert directions',
-					'imageLink': ['http://www.nus.edu.sg/identity/images/identity/logo/NUS_logo_full-horizontal.jpg']
-				});
-				console.log(vertexArr[item].edgeList[vertexArr[item].edgeList.length-1]);
-			}
+		//add forward direction edge
+		if(fullMap[name1]){//if from vertex exists
+			fullMap[name1].edges[name2] = {
+				'time': distance/walkingSpeed/60,
+				'distance': distance,
+				'stairsDirection':stairsDirection,
+				'stairsWeight': weightedStairs,
+				'shelterRating': shelterMultiplier * distance,
+				'shelterMultiplier': shelterMultiplier,
+				'directions': 'Insert directions',
+				'imageLink': ['http://www.nus.edu.sg/identity/images/identity/logo/NUS_logo_full-horizontal.jpg']
+			};
+			console.log( name1 + " to " + name2 + " " + JSON.stringify(fullMap[name1].edges[name2])) ;
+		}else{
+			console.log( name1 + " does not exist" );
 		}
-		//find name2
-		for(item in vertexArr){
-			if(vertexArr[item].vertex === name2){
-
-				var flippedDirection = (stairsDirection === 1 ) ? 1 : ( (stairsDirection === 0) ? 2 : 0);
-				var weightedStairs = (flippedDirection === 2 ) ? flippedDirection * distance : distance;
-
-				//add reverse direction edge
-				vertexArr[item].edgeList.push({
-					'destination': name1,
-					'time': distance/walkingSpeed/60,
-					'distance': distance,
-
-				  //if it is 0 , dont change, else swap between 0(down) and 2(up)
-				  'stairsDirection': flippedDirection,
-				  'stairsWeight': weightedStairs,
-
-				  'shelterRating': shelterMultiplier * distance,
-				  'shelterMultiplier': shelterMultiplier,
-				  'directions': 'Insert directions',
-				  'imageLink': ['http://www.nus.edu.sg/identity/images/identity/logo/NUS_logo_full-horizontal.jpg']
-				});
-				console.log(vertexArr[item].edgeList[vertexArr[item].edgeList.length-1]);
-			}
-		}
-
-		console.log(name1 + " <-> " + name2 );
-		console.log("2 edges added")
 		
+		//add reverse direction edge
+		if(fullMap[name2]){//if to vertex exists
+			var flippedDirection = (stairsDirection === 1 ) ? 1 : ( (stairsDirection === 0) ? 2 : 0);
+			var weightedStairs = (flippedDirection === 2 ) ? flippedDirection * distance : distance;
+
+			//add reverse direction edge
+			fullMap[name2].edges[name1] = {
+				'time': distance/walkingSpeed/60,
+				'distance': distance,
+				//if it is 0 , dont change, else swap between 0(down) and 2(up)
+				'stairsDirection': flippedDirection,
+				'stairsWeight': weightedStairs,
+				'shelterRating': shelterMultiplier * distance,
+				'shelterMultiplier': shelterMultiplier,
+				'directions': 'Insert directions',
+				'imageLink': ['http://www.nus.edu.sg/identity/images/identity/logo/NUS_logo_full-horizontal.jpg']
+			};
+			console.log( name2 + " to " + name1 + " " + JSON.stringify(fullMap[name2].edges[name1]));
+		}else{
+			console.log( name2 + " does not exist" );
+		}
+		console.log(name1 + " <-> " + name2 );
+		console.log("2 edges added")	
 	}else{
 		console.log("pair of edges" + name1 + " <-> " + name2 + "already exists")
 	}
@@ -194,7 +179,7 @@ function editEdges(){
 	var name2 = prompt("to vertex");
 	var walkingSpeed = 1.4;
 
-	//if both directions edge exist
+	//if both directions edges exist
 	if (areVertexesLinked(name1,name2) === true){
 		//input direction is name1 to name2
 		//var time = parseFloat(prompt("timetaken"));
@@ -202,53 +187,41 @@ function editEdges(){
 		var stairsDirection = parseFloat(prompt("number of flights of stairs diff\ndown 0, flat ground 1, up 2, \ndefault is flat ground", 1 ));
 		var shelterMultiplier = parseFloat(prompt("shelter 0 for sheltered, 1 not sheltered\n default is sheltered ", 0 ));
 		
-		//find name1 edge to name 2
-		for(item in vertexArr){
-			if(vertexArr[item].vertex === name1){
-				for (edge in vertexArr[item].edgeList){
-					if(vertexArr[item].edgeList[edge].destination === name2){
-						vertexArr[item].edgeList[edge].time = distance/walkingSpeed/60;
-						vertexArr[item].edgeList[edge].distance = distance ;
-						
-						var weightedStairs = (stairsDirection === 2 ) ? stairsDirection * distance : distance;
-						vertexArr[item].edgeList[edge].stairsWeight = weightedStairs;
-						vertexArr[item].edgeList[edge].stairsDirection = stairsDirection;
-						
-						vertexArr[item].edgeList[edge].shelterRating = shelterMultiplier* distance;
-						vertexArr[item].edgeList[edge].shelterMultiplier = shelterMultiplier;
-						
-						console.log((vertexArr[item].edgeList[edge]));
-					}
-				}
-			}
-		}
-		//find name2 edge to name 1
-		for(item in vertexArr){
-			if(vertexArr[item].vertex === name2){
-				for (edge in vertexArr[item].edgeList){
-					if(vertexArr[item].edgeList[edge].destination === name1){
-						vertexArr[item].edgeList[edge].time = distance/walkingSpeed/60;
-						vertexArr[item].edgeList[edge].distance = distance;
-						
-						var flippedDirection = (stairsDirection === 1 ) ? 1 : ( (stairsDirection === 0) ? 2 : 0);
-						var weightedStairs = (flippedDirection === 2 ) ? flippedDirection * distance : distance;
+		//edit forward direction
+		fullMap[name1].edges[name2].time = distance/walkingSpeed/60;
+		fullMap[name1].edges[name2].distance = distance;
+		
+		var weightedStairs = (stairsDirection === 2 ) ? stairsDirection * distance : distance;
 
-						vertexArr[item].edgeList[edge].stairsWeight = weightedStairs;
-						//if it is 0 , dont change, else swap between 0(down) and 2(up)
-						vertexArr[item].edgeList[edge].stairsDirection = flippedDirection;
-						
-						vertexArr[item].edgeList[edge].shelterRating = shelterMultiplier* distance;
-						vertexArr[item].edgeList[edge].shelterMultiplier = shelterMultiplier;					
+		fullMap[name1].edges[name2].stairsWeight = weightedStairs;
+		fullMap[name1].edges[name2].stairsDirection = stairsDirection;
+		
+		fullMap[name1].edges[name2].shelterRating = shelterMultiplier* distance;
+		fullMap[name1].edges[name2].shelterMultiplier = shelterMultiplier;
+		
+		console.log( name1 + " to " + name2 + " " + JSON.stringify(fullMap[name1].edges[name2]));
+					
+		
+		//edit reverse direction
+		fullMap[name2].edges[name1].time = distance/walkingSpeed/60;
+		fullMap[name2].edges[name1].distance = distance;
+		
+		//if it is 1 , dont change, else swap between 0(down) and 2(up)
+		var flippedDirection = (stairsDirection === 1 ) ? 1 : ( (stairsDirection === 0) ? 2 : 0);
+		weightedStairs = (flippedDirection === 2 ) ? flippedDirection * distance : distance;
 
-						console.log((vertexArr[item].edgeList[edge]));
-					}
-				}
-			}
-		}
+		fullMap[name2].edges[name1].stairsWeight = weightedStairs;
+		fullMap[name2].edges[name1].stairsDirection = flippedDirection;
+		
+		fullMap[name2].edges[name1].shelterRating = shelterMultiplier* distance;
+		fullMap[name2].edges[name1].shelterMultiplier = shelterMultiplier;					
+
+		console.log( name2 + " to " + name1 + " " + JSON.stringify(fullMap[name2].edges[name1]));
+
 		console.log("2 edges edited")
 		
 	}else{
-		console.log("one or two edges do not exists(maybe vertex too)")
+		console.log("the 2 vertices are not linked")
 	}
 	console.log(name1 + " <-> " + name2 );
 
@@ -263,30 +236,16 @@ function readEdges(){
 	//if both directions edge exist
 	if (areVertexesLinked(name1,name2) === true){
 
-		//find name1 edge to name 2
-		for(item in vertexArr){
-			if(vertexArr[item].vertex === name1){
-				for (edge in vertexArr[item].edgeList){
-					if(vertexArr[item].edgeList[edge].destination === name2){
-						console.log(vertexArr[item].edgeList[edge]);
-					}
-				}
-			}
-		}
-		//find name2 edge to name 1
-		for(item in vertexArr){
-			if(vertexArr[item].vertex === name2){
-				for (edge in vertexArr[item].edgeList){
-					if(vertexArr[item].edgeList[edge].destination === name1){
-						console.log(vertexArr[item].edgeList[edge]);
-					}
-				}
-			}
-		}
+		//name1 edge to name 2
+		console.log( name1 + " to " + name2 + " " + JSON.stringify(fullMap[name1].edges[name2]));
+
+		//name2 edge to name 1
+		console.log( name2 + " to " + name1 + " " + JSON.stringify(fullMap[name2].edges[name1]));
+
 		console.log("2 edges read")
 		
 	}else{
-		console.log("one or two edges does not exists(maybe vertex too)");
+		console.log("either the edges do not exist or they are not linked");
 	}
 	console.log(name1 + " <-> " + name2 );
 
@@ -301,32 +260,17 @@ function removeEdges(){
 
 	//if both directions edge exist
 	if (areVertexesLinked(name1,name2) === true){
-
-		//find name1 edge to name 2
-		for(item in vertexArr){
-			if(vertexArr[item].vertex === name1){
-				for (edge in vertexArr[item].edgeList){
-					if(vertexArr[item].edgeList[edge].destination === name2){
-
-						vertexArr[item].edgeList.splice(edge,1);
-					}
-				}
-			}
-		}
-		//find name2 edge to name 1
-		for(item in vertexArr){
-			if(vertexArr[item].vertex === name2){
-				for (edge in vertexArr[item].edgeList){
-					if(vertexArr[item].edgeList[edge].destination === name1){
-						vertexArr[item].edgeList.splice(edge,1);
-					}
-				}
-			}
-		}
+		console.log(fullMap[name1].edges[name2])
+		//delete name1 edge to name2
+		delete fullMap[name1].edges[name2];			
+		
+		//delete name2 edge to name1
+		delete fullMap[name2].edges[name1];
+			
 		console.log("2 edges removed")
 		
 	}else{
-		console.log("one or two edges does not exists(maybe vertex too)");
+		console.log("either the edges do not exist or they are not linked");
 	}
 	console.log(name1 + " <-> " + name2 );
 
@@ -334,10 +278,10 @@ function removeEdges(){
 
 function changeWalkingSpeed(){
 	var walkingSpeed = prompt("Input the new walking speed in m/s?", 1.4);
-	for (vert in vertexArr){
-		for (edge in vertexArr[vert].edgeList){
-			var time = vertexArr[vert].edgeList[edge].distance / walkingSpeed / 60;
-			vertexArr[vert].edgeList[edge].time = time;
+	for (v in fullMap){
+		for (e in fullMap[v].edges){
+			var time = fullMap[v].edges[e].distance / walkingSpeed / 60;
+			fullMap[v].edges[e].time = time;
 		}
 	}
 }

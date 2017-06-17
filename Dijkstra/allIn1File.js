@@ -3218,7 +3218,17 @@ function Graph(){
         time += g.vertices[path[i]].edges[path[i+1]].time;
       }
       return time;
-  }
+  };
+
+  //takes in 2 vertexes and returns the message of the forward direction
+  this.getEdgeDirections = function(fromVert, toVert){
+      return g.vertices[fromVert].edges[toVert].directions;
+  };
+
+  //takes in 2 vertexes and returns array of links of the forward direction
+  this.getEdgeImageLinks = function(fromVert, toVert){
+      return g.vertices[fromVert].edges[toVert].imageLink;
+  };
 
   //takes in the start and finish location then outputs the path
   this.printAllOutputs = function(){

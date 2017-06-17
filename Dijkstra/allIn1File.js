@@ -3464,6 +3464,7 @@ var mapData = [
   }
 ];
 
+//formatting data
 var finalMap = {};
 
 //create vertices with no edges
@@ -3482,7 +3483,6 @@ for(v in mapData){
 	for(e in mapData[v].edgeList){
 
 		var dest = mapData[v].edgeList[e].destination;//name
-		console.log(dest);
 
 		finalMap[mapData[v].vertex].edges[dest] = {
 		    "time": mapData[v].edgeList[e].time,
@@ -3522,17 +3522,15 @@ function PriorityQueue () {
   };
 }
 
-/**
- * Pathfinding starts here
- */
+/////////////////////////////
+// Pathfinding starts here //
+/////////////////////////////
 function Graph(){
+  //copies over from finalMap
   this.vertices = finalMap;
 
-  // this.addVertex = function(name, edges){
-  //   this.vertices[name] = edges;
-  // };
-
-  this.shortestPath = function (start, finish) {
+  //takes in start and end location and quiery number and returns the path
+  this.shortestPath = function (start, finish, queryNum) {
     var nodes = new PriorityQueue(),
         path = [],
         smallest, v, e, localWeight;
@@ -3571,7 +3569,22 @@ function Graph(){
       }
 
       for(e in this.vertices[smallest].edges) {
-        localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].time;//use time for weight now
+        var localWeight;
+        switch(queryNum){
+          case 1:
+            localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].time;
+          break;
+          case 2:
+            localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].distance;
+          break;
+          case 3:
+            localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].stairsWeight;
+          break;
+          case 4:
+            localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].shelterRating;
+          break;
+          //no default
+        };
 
         if(localWeight < this.vertices[e].weight) {
           this.vertices[e].weight = localWeight;
@@ -3582,11 +3595,48 @@ function Graph(){
       }
     }
 
-    return path;
+    //Adds the start vertex for improved readability
+    return path.concat([start]).reverse();
   };
+
+  //takes in a path: array of vertex names, and outputs time taken
+  this.getPathtime = function(path){
+      var time = 0;
+      for(var i=0; i<path.length-1; i++){
+        time += g.vertices[path[i]].edges[path[i+1]].time;
+      }
+      return time;
+  }
+
+  //takes in the start and finish location then outputs the path
+  this.printAllOutputs = function(){
+    var start = prompt("Input start location");
+    var finish = prompt("Input destination");
+
+    var path, time;
+    for (var i=1; i<=4; i++){
+      path = g.shortestPath(start, finish, i);
+      time = g.getPathtime(path);
+
+      console.log( path + " : " + Math.ceil(time) + " min" )
+    }    
+    // path = g.shortestPath(start, finish, 1);
+    // time = g.getPathtime(path);
+    // console.log( path + " : " + Math.ceil(time) + " min");
+    // path = g.shortestPath(start, finish, 2);
+    // time = g.getPathtime(path);
+    // console.log( path + " : " + Math.ceil(time) + " min");     
+    // path = g.shortestPath(start, finish, 3);
+    // time = g.getPathtime(path);
+    // console.log( path + " : " + Math.ceil(time) + " min");
+    // path = g.shortestPath(start, finish, 4);
+    // time = g.getPathtime(path);
+    // console.log( path + " : " + Math.ceil(time) + " min");
+
+  };
+
 }
 
+//graph must be instantiated
 var g = new Graph();
-
-// Log test, with the addition of reversing the path and prepending the first node so it's more readable
-console.log(g.shortestPath('EA', 'E1').concat(['EA']).reverse());
+g.printAllOutputs();

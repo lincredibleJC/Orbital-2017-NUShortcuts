@@ -3,20 +3,36 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
+Template.locationInput.onCreated(function locationInputOnCreated() {
+  // locationInput
+  this.locationInput = new ReactiveVar(0);
 });
 
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
+Template.locationInput.helpers({
+  locationInput(){
+    return Template.instance().locationInput.get();
   },
 });
 
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+Template.output.events({
+  'search button'(event, instance){
+	  //search when search button is clicked
+	},
 });
+
+
+/*
+map in the background
+
+navigation drawer on the left
+settings drawer on the left
+
+input:
+onclick for search: run queries
+on click on query type, hide all other queries and open the list of instructions and bolded names of vertex
+on click on instructions or image on right, show image, click again to return
+on click on bolded vertex, popout navbar and show vertex details, including photos and list of rooms.
+
+
+on back rbutton for everything, undo 1 action.
+*/

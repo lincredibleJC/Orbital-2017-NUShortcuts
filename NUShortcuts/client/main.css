@@ -1,1 +1,34 @@
 /* CSS declarations go here */
+
+/*Allows vertical scrolling*/
+.scrollableList-outer{
+	height: 350px;
+	width: 40%;
+	border-style:groove;
+	overflow-y: scroll;
+}
+
+.scrollableList-inner{
+	height: 100px;
+	width: 40%;
+	border-style:ridge;
+	overflow-y: scroll;
+}
+
+.menuBar{
+	height:100%;
+	width:300px;
+	background-color:orange;
+	position:fixed !important;
+	z-index:1;
+	overflow:auto;
+}
+
+.mapContent{
+	background: #d2edf4;
+	background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+	padding: 20px 15px 15px 15px;
+	position: relative;
+	z-index:2;
+	margin-left: 300px;
+}

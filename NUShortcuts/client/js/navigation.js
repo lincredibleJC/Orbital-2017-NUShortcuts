@@ -1,6 +1,17 @@
-Template.navigation.rendered =function(){
-  //alert("rendered");
+Template.navigation.rendered = function(){
+  $("#navigation-link").addClass('selected');
+  $("#settings-link").removeClass('selected');
+  $("#locationSearch-link").removeClass('selected');
+  $("#popularLocations-link").removeClass('selected');
+  $("#map-link").removeClass('selected');
 }
+
+Template.navigation.helpers({
+  rendered: function(){
+
+  }
+});
+
 
 Template.navigation.events({
   "submit .navigation": function(event){
@@ -12,7 +23,13 @@ Template.navigation.events({
     isValidLocation(startLocation) &&
     isValidLocation(endLocation) ){
 
-      //TODO: link to Dijkstras algo
+    Meteor.call( 'calculatePath', startLocation, endLocation);
+
+    event.target.startLocation.value = startLocation;
+    event.target.endLocation.value =  endLocation;
+
+    Bert.alert("calculating", "success", "growl-top-right");
+
       //TODO: link to maps page
     }
 

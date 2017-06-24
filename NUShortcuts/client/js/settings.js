@@ -1,8 +1,13 @@
-Template.appSettings.rendered =function(){
+Template.settings.rendered = function(){
+  $("#settings-link").addClass('selected');
+  $("#navigation-link").removeClass('selected');
+  $("#locationSearch-link").removeClass('selected');
+  $("#popularLocations-link").removeClass('selected');
+  $("#map-link").removeClass('selected');
   //alert("rendered");
 }
 
-Template.appSettings.events({
+Template.settings.events({
   "change .transportMode": function(event){
     var transportMode = event.target.transportMode.value;
 

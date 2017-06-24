@@ -1,4 +1,9 @@
-Template.locationSearch.rendered =function(){
+Template.locationSearch.rendered = function(){
+  $("#locationSearch-link").addClass('selected');
+  $("#navigation-link").removeClass('selected');
+  $("#settings-link").removeClass('selected');
+  $("#popularLocations-link").removeClass('selected');
+  $("#map-link").removeClass('selected');
   //alert("rendered");
 }
 

@@ -4,9 +4,15 @@ Router.configure({
 
 Router.map(function(){
 	// Homepage, which  is also navigation
-	this.route('home', {
+	this.route('navigation', {
 		path: '/',
 		template: 'navigation'
+	});
+
+	// Map
+	this.route('map', {
+		path: '/map',
+		template: 'map'
 	});
 
 	// locationSearch
@@ -21,16 +27,10 @@ Router.map(function(){
 		template: 'popularLocations'
 	});
 
-	// Map
-	this.route('map', {
-		path: '/map',
-		template: 'map'
-	});
-
 	// Settings
-	this.route('appSettings', {
-		path: '/appSettings',
-		template: 'appSettings'
+	this.route('settings', {
+		path: '/settings',
+		template: 'settings'
 	});
 
 

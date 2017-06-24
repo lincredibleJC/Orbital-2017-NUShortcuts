@@ -1,0 +1,29 @@
+<template name="appSettings">
+    <h2>Settings</h2>
+
+    <form class="appSettings">
+      <ul>
+        <li>Transport mode
+          <br><input type="text" name="transportMode" id="transportMode" class="form-control" placeholder="transport mode"/>
+          <br/>Walking only
+          <br/>or
+          <br/>Walk and with bus
+        </li>
+
+        <li>Your walking speed
+          <br><input type="text" name="walkingSpeed" id="walkingSpeed" class="form-control" placeholder="walking speed in m/s"/>
+          <br/>The average is 1.2m/s
+        </li>
+
+        <li>Faculty to avoid
+          <br><input type="text" name="facultyToAvoid" id="facultyToAvoid" class="form-control" placeholder="select faculty"/>
+          <br/>People don't like engineering
+        </li>
+
+        <li>Dark mode<input type="checkbox" name="dim" tabindex="0" class="hidden"/>
+        </li>
+        
+      </ul>
+    </form>
+
+</template>

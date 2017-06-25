@@ -3,7 +3,11 @@
     <h4>Google maps and other funtionality will be added soon</h4>
     <body>
       <div class="map-container">
-        {{> googleMap name="nusMap" options=exampleMapOptions}}
+        {{#unless geolocationError}}
+             {{> googleMap name="nusMap" options=mapOptions}}
+           {{else}}
+             Geolocation failed: {{geolocationError}}
+           {{/unless}}
       </div>
     </body>
   </div>

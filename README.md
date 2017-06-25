@@ -1,4 +1,5 @@
-# Orbital-2017-NUShortcuts
+# Orbital-2017-NUShortcuts [![Code Climate](http://img.shields.io/codeclimate/github/lincredibleJC/Orbital-2017-NUShortcuts.svg)](https://codeclimate.com/github/lincredibleJC/Orbital-2017-NUShortcuts)
+
 Mobile application to provide step by step picture guides to for shortcuts around NUS.
 
 The initial idea for the Project is to provide step by step pictorial instructions to shortcuts around NUS, hence the name NUShortcuts.

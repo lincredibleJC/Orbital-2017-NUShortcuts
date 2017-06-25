@@ -32,3 +32,5 @@ meteortoys:allthings
 easy:search
 easysearch:elasticsearch
 easysearch:autosuggest
+dburles:google-maps
+mdg:geolocation

@@ -8,7 +8,7 @@ body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   line-height: 1;
-  background-image: url("pattern.png"); 
+  background-image: url("pattern.png");
 }
 
 * {
@@ -16,9 +16,25 @@ body {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+/* The whole page minus the sidebar */
+.main-container {
+  max-width: 100%;
+  padding-top: 40px;
+  padding-right: 100px;
+  padding-left: 350px;
+  margin:auto;
+}
+/* The main content */
+.main-content {
+  max-width: 600px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin:auto;
+}
 
 .block {
-  
+
   /*float: left;*/
     display: inline-block;
 }

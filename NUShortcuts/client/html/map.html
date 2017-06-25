@@ -1,6 +1,10 @@
 <template name="map">
-  <div class="mapSupport">
-    <h4>will add google maps and other functionality soon
-</h4>
+  <div class="map-div">
+    <h4>Google maps and other funtionality will be added soon</h4>
+    <body>
+      <div class="map-container">
+        {{> googleMap name="nusMap" options=exampleMapOptions}}
+      </div>
+    </body>
   </div>
 </template>

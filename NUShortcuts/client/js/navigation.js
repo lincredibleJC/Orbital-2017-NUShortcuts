@@ -4,8 +4,17 @@ Template.navigation.onRendered(function() {
   $("#locationSearch-link").removeClass('selected');
   $("#popularLocations-link").removeClass('selected');
   $("#map-link").removeClass('selected');
+
 });
 
+//Warning Direct access to global variable
+Template.registerHelper('arrayify', function(obj) {
+  var result = [];
+  for (var key in finalMap) result.push({
+    name: key
+  });
+  return result;
+});
 Template.navigation.events({
   "submit .navigation": function(event) {
     var startLocation = trimInput(event.target.startLocation.value);

@@ -6,10 +6,20 @@
         <h4 class="navigation-introduction">Tell us where you want to go and we'll show you the way</h4>
 
         <label for="startLocation" class="sr-only">Starting Location</label>
-				<input type="text" name="startLocation" id="startLocation" class="form-control" placeholder="Input starting location" maxlength="40">
+        <input list="locations" name="startLocation" id="startLocation" class="form-control" placeholder="Choose starting location">
+        <datalist id="locations">
+          {{#each arrayify myobject}}
+            <option value="{{name}}"></option>
+          {{/each}}
+        </datalist>
 
         <label for="endLocation" class="sr-only">End Location</label>
-				<input type="text" name="endLocation" id="endLocation" class="form-control" placeholder="Input destination" maxlength="40">
+        <input list="locations" name="endLocation" id="endLocation" class="form-control" placeholder="Choose destination">
+        <datalist id="locations">
+          {{#each arrayify myobject}}
+            <option value="{{name}}"></option>
+          {{/each}}
+        </datalist>
 
 				<button class="btn btn-lg btn-success btn-block" type="submit">Show me the way!</button>
 

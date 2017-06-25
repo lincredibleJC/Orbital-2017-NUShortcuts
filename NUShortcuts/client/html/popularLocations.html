@@ -1,17 +1,11 @@
 <template name="popularLocations">
-  <div class="popularLocations">
-    <center><h3>Here are the most popular locations and routes</h3></center>
+  <div class="popularLocations display">
+    <center><h2 class="display-title">Here are the most popular locations and routes</h2></center>
       <ol>
-        <li>Location 1</li>
-        <li>Location 2</li>
-        <li>Location 3</li>
-        <li>Location 4</li>
-        <li>Location 5</li>
-        <li>Location 6</li>
-        <li>Location 7</li>
-        <li>Location 8</li>
-        <li>Location 9</li>
-        <li>Location 10</li>
+        {{#each arrayify myobject}}
+          <li class="meta">{{name}}</li>
+          <br>
+        {{/each}}
       </ol>
     </div>
 </template>

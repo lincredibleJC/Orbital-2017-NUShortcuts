@@ -5,3 +5,9 @@ Template.map.rendered = function(){
   $("#popularLocations-link").removeClass('selected');
   $("#settings-link").removeClass('selected');
 }
+
+Template.map.events({
+    'click': function(){
+        console.log("You clicked something");
+    }
+});

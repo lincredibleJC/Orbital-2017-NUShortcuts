@@ -3187,7 +3187,7 @@ function Graph(){
       }
 
       if(!smallest || this.vertices[smallest].weight === Infinity){continue;}
-      
+
       for(e in this.vertices[smallest].edges) {
         var localWeight;
         switch(queryNum){
@@ -3239,7 +3239,7 @@ function Graph(){
       path = g.shortestPath(start, finish, i);
       time = g.getPathtime(path);
       console.log( path + " : " + Math.ceil(time) + " min" )
-    }    
+    }
   };
 
 }

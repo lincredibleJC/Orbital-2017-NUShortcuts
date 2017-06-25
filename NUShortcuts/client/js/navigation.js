@@ -1,17 +1,14 @@
+Template.navigation.onCreated = function(){
+
+};
+
 Template.navigation.rendered = function(){
   $("#navigation-link").addClass('selected');
   $("#settings-link").removeClass('selected');
   $("#locationSearch-link").removeClass('selected');
   $("#popularLocations-link").removeClass('selected');
   $("#map-link").removeClass('selected');
-}
-
-Template.navigation.helpers({
-  rendered: function(){
-
-  }
-});
-
+};
 
 Template.navigation.events({
   "submit .navigation": function(event){
@@ -23,14 +20,23 @@ Template.navigation.events({
     isValidLocation(startLocation) &&
     isValidLocation(endLocation) ){
 
-    Meteor.call( 'calculatePath', startLocation, endLocation);
+      Bert.alert("Calculating paths", "success", "growl-top-right");
 
-    event.target.startLocation.value = startLocation;
-    event.target.endLocation.value =  endLocation;
+      event.target.startLocation.value = startLocation;
+      event.target.endLocation.value =  endLocation;
+      console.log(mapData);
+      //run the queries and populate the layouts
+      Meteor.call( 'calculatePaths', startLocation, endLocation);
 
-    Bert.alert("calculating", "success", "growl-top-right");
+      //show the query layout
+      $(".queryLayout").css('visibility', 'visible');
+
+
 
       //TODO: link to maps page
+    }else {
+      //hides the query layout
+      $(".queryLayout").css('visibility', 'hidden');
     }
 
     return false;//prevent submitting of form
@@ -54,9 +60,8 @@ var isNotEmpty = function(value){
 
 // Check location fields
 isValidLocation = function(location){
-  //supposed to be checkign list of locations
-  //TODO:
-	if(location==asdf){
+  //TODO:supposed to be checkign list of locations
+	if(false){
 		Bert.alert("location is not valid", "danger", "growl-top-right");
 		return false;
 	}

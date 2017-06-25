@@ -4,9 +4,11 @@
 			<form class="navigation">
 				<h1 class="navigation-heading">Welcome to NUShortcuts</h1>
         <h4 class="navigation-introduction">Tell us where you want to go and we'll show you the way</h4>
-				<label for="startLocation" class="sr-only">Starting Location</label>
+
+        <label for="startLocation" class="sr-only">Starting Location</label>
 				<input type="text" name="startLocation" id="startLocation" class="form-control" placeholder="Input starting location" maxlength="40">
-				<label for="endLocation" class="sr-only">Joke Post</label>
+
+        <label for="endLocation" class="sr-only">End Location</label>
 				<input type="text" name="endLocation" id="endLocation" class="form-control" placeholder="Input destination" maxlength="40">
 
 				<button class="btn btn-lg btn-success btn-block" type="submit">Show me the way!</button>
@@ -17,6 +19,7 @@
 			</form>
 
 		</center>
-
 	</div>
+  {{> queryLayout}}
+
 </template>

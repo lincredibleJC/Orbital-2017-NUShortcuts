@@ -3,49 +3,50 @@
   max-width: 600px;
   padding-top: 40px;
   padding-right: 40px;
-  margin: 0 0 40px 250px;
+  padding-left: 40px;
+  margin:auto;
 }
 
-.joke {
+.display {
 	border: 1px solid #ececec;
 	background-color: #2d2d2d;
 	padding: 10px 20px;
 	margin: 0px 0px 20px 0px;
 }
 
-.joke:hover {
-	
+.display:hover {
+
 	background-color: #3a3a3a;
 }
 
-.joke-img {
+.display-img {
  	width: 100%;
  	max-height: 500px;
  	color:#fff;
  	background-repeat:no-repeat;
  	background-attachment:scroll;
-	background-position:center center; 
-	-webkit-background-size:cover; 
-	-moz-background-size:cover; 
-	background-size:cover; 
+	background-position:center center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
 	-o-background-size:cover;
 }
 
-.joke-title {
-	color: #52b859;
-	font-size: 40px;
+.display-title {
+	color: lightblue;
+	font-size: 32px;
 	margin: 0px 0px;
 	padding-bottom: 10px;
 	word-wrap: break-word;
 }
 
 .meta {
-	color: #fff;	
-	font-size: 18px;
+	color: #fff;
+	font-size: 16px;
 	font-weight: 900;
 }
 
-.joke-desc {
+.display-desc {
 	color: #bcbcbc;
 	font-size: 18px;
     line-height: 1.8;
@@ -88,5 +89,3 @@
 	padding-top: 0px;
 	margin-top: 0px;
 }
-
-

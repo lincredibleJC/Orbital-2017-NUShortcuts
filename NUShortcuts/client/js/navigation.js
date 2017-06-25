@@ -1,14 +1,15 @@
-Template.navigation.onCreated = function(){
-
-};
-
-Template.navigation.rendered = function(){
+Template.navigation.onRendered(function(){
   $("#navigation-link").addClass('selected');
   $("#settings-link").removeClass('selected');
   $("#locationSearch-link").removeClass('selected');
   $("#popularLocations-link").removeClass('selected');
   $("#map-link").removeClass('selected');
+});
+
+Template.navigation.onCreated = function(){
+
 };
+
 
 Template.navigation.events({
   "submit .navigation": function(event){
@@ -24,14 +25,23 @@ Template.navigation.events({
 
       event.target.startLocation.value = startLocation;
       event.target.endLocation.value =  endLocation;
-      console.log(mapData);
-      //run the queries and populate the layouts
-      Meteor.call( 'calculatePaths', startLocation, endLocation);
 
-      //show the query layout
+      //shows the query layout
       $(".queryLayout").css('visibility', 'visible');
 
-
+      //calls dijkstras algo and displays results in the 4 query templates
+      var timeResult = g.getQueryOutput(startLocation, endLocation, 1).split(" : ");
+      $('#timeTime').text("Time needed: " + timeResult[1] );
+      $('#timePath').text("Path: " + timeResult[0] );
+      var distanceResult = g.getQueryOutput(startLocation, endLocation, 2).split(" : ");
+      $('#distanceTime').text("Time needed: " + distanceResult[1] );
+      $('#distancePath').text("Path: " + distanceResult[0] );
+      var stairsResult = g.getQueryOutput(startLocation, endLocation, 3).split(" : ");
+      $('#stairsTime').text("Time needed:  " + stairsResult[1] );
+      $('#stairsPath').text("Path: " + stairsResult[0] );
+      var shelterResult = g.getQueryOutput(startLocation, endLocation, 4).split(" : ");
+      $('#shelterTime').text("Time needed: " + shelterResult[1] );
+      $('#shelterPath').text("Path: " + shelterResult[0] );
 
       //TODO: link to maps page
     }else {
@@ -58,10 +68,9 @@ var isNotEmpty = function(value){
 	return false;
 };
 
-// Check location fields
+// Check of locations in location fields exist
 isValidLocation = function(location){
-  //TODO:supposed to be checkign list of locations
-	if(false){
+	if(!g.vertexExists){
 		Bert.alert("location is not valid", "danger", "growl-top-right");
 		return false;
 	}

@@ -1,4 +1,4 @@
-# Orbital-2017-NUShortcuts [![Code Climate](http://img.shields.io/codeclimate/github/lincredibleJC/Orbital-2017-NUShortcuts.svg)](https://codeclimate.com/github/lincredibleJC/Orbital-2017-NUShortcuts)
+# Orbital-2017-NUShortcuts [![Code Climate](http://img.shields.io/codeclimate/github/lincredibleJC/Orbital-2017-NUShortcuts.svg)](https://codeclimate.com/github/lincredibleJC/Orbital-2017-NUShortcuts)[![Build Status](https://travis-ci.org/lincredibleJC/Orbital-2017-NUShortcuts.svg?branch=master)](https://travis-ci.org/lincredibleJC/Orbital-2017-NUShortcuts)
 
 Mobile application to provide step by step picture guides to for shortcuts around NUS.
 

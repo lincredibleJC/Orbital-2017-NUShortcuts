@@ -1,4 +1,4 @@
-{
+var finalMap = {
   "EA": {
     "faculty": "Engineering",
     "locationType": "Building",

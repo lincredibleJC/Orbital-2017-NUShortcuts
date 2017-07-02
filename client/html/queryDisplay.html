@@ -1,0 +1,40 @@
+<template name="queryDisplay">
+  <div class="display">
+    <div class="row">
+      <div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
+        <h4 class="display-title">{{queryName}}</h4>
+        <p class="meta" id="time">Time needed: {{time}}
+        </p>
+        <p class="meta" id="path">Path: {{path}}
+        </p>
+
+        <!-- Collapsible path display starts here-->
+        <a class="meta" data-toggle="collapse" href="#{{queryName}}">Click to expand path</a>
+        <div id="{{queryName}}" class="panel-collapse collapse">
+          <br>
+          <ul class="list-group">
+            <!--loop each vertex in path-->
+           <li class="list-group-item meta" >
+             <!--Takes in 2 vertices in froward direction as argument-->
+             <div class="display">
+               <a class="meta" data-toggle="collapse" href="#{{queryName}}_{{vertexName}}">{{vertexName}} | {{instructions}}</a>
+
+               <!--collapses to shop image-->
+               <div id="{{queryName}}_{{vertexName}}" class="panel-collapse collapse">
+                 <br>
+                 <img src="https://speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2010/03/four-oh-four_16.jpg" alt="">
+               </div>
+              <!--ends here-->
+
+             </div>
+           </li>
+
+         </ul>
+        </div>
+        <!-- Collapsible path display ends here-->
+
+
+      </div>
+    </div>
+  </div>
+</template>

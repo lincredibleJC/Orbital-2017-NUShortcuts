@@ -7,6 +7,47 @@ Template.navigation.onRendered(function() {
 
 });
 
+Template.navigation.onCreated(() => {
+  let template = Template.instance();
+  template.toDisplay = new ReactiveVar(false); //holds current value of search input
+});
+
+Template.navigation.helpers({
+  toDisplay: function(){
+    return Template.instance().toDisplay.get();
+  },
+
+  pathTemplateCounter: function() {
+    Template.instance().toDisplay.set(Template.instance().toDisplay.get() + 1);
+    return Template.instance().toDisplay.get();
+  },
+
+
+  queryOutputArray: function(){
+    return [{
+        "queryName": "asdfas",
+        "time": 1122,
+        "path": "asdf,asdfafs, asdfsdf, asdfasda,sdf asfd",
+        "vertexName":"E901823",
+        "instructions": "go fk yoursekf"
+    },{
+        "queryName": "df",
+        "time": 1223411,
+        "path": "asdfsdf,aasdfaasdf",
+        "vertexName":"E9dasfa1823",
+        "instructions": "go fk yourdsekf"
+    },{
+        "queryName": "aasfasdfsdfas",
+        "time": 121234,
+        "path": "asdasdfasdf,asasdfdf",
+        "vertexName":"E9011234823",
+        "instructions": "go fk yoursekf"
+    }]
+  },
+
+});
+
+
 //Warning Direct access to global variable
 Template.registerHelper('arrayify', function(obj) {
   var result = [];
@@ -15,6 +56,7 @@ Template.registerHelper('arrayify', function(obj) {
   });
   return result;
 });
+
 Template.navigation.events({
   "submit .navigation": function(event) {
     var startLocation = trimInput(event.target.startLocation.value);
@@ -26,34 +68,13 @@ Template.navigation.events({
       isValidLocation(endLocation)) {
 
       Bert.alert("Calculations done", "success", "growl-top-right");
-
-      //calls dijkstras algo and puts results in the 4 query templates
-      var timeResult = g.getQueryOutput(startLocation, endLocation, 1).split(" : ");
-      $('#timeTime').text("Time needed: " + timeResult[1]);
-      $('#timePath').text("Path: " + timeResult[0]);
-      var distanceResult = g.getQueryOutput(startLocation, endLocation, 2).split(" : ");
-      $('#distanceTime').text("Time needed: " + distanceResult[1]);
-      $('#distancePath').text("Path: " + distanceResult[0]);
-      var stairsResult = g.getQueryOutput(startLocation, endLocation, 3).split(" : ");
-      $('#stairsTime').text("Time needed:  " + stairsResult[1]);
-      $('#stairsPath').text("Path: " + stairsResult[0]);
-      var shelterResult = g.getQueryOutput(startLocation, endLocation, 4).split(" : ");
-      $('#shelterTime').text("Time needed: " + shelterResult[1]);
-      $('#shelterPath').text("Path: " + shelterResult[0]);
-
-      //shows the query layout
-      $(".queryLayout").css('visibility', 'visible');
-
-      //TODO: link to maps page for each query
+      Template.instance().toDisplay.set(true);
     } else {
-      //hides the query layout
-      $(".queryLayout").css('visibility', 'hidden');
+      Template.instance().toDisplay.set(false);
     }
-
     //keeps the input inside the field
     event.target.startLocation.value = startLocation;
     event.target.endLocation.value = endLocation;
-
     return false; //prevent submitting of form
   }
 });

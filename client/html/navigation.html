@@ -30,6 +30,14 @@
 
 		</center>
 	</div>
-  {{> queryLayout}}
+
+  {{#if toDisplay}}
+  <div class="queryLayout" >
+    <h2>Results</h2>
+    {{#each queryOutputArray}}
+      {{> queryDisplay}}
+    {{/each}}
+  </div>
+  {{/if}}
 
 </template>

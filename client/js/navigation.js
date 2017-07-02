@@ -17,57 +17,9 @@ Template.navigation.helpers({
     return Template.instance().toDisplay.get();
   },
 
-  pathTemplateCounter: function() {
-    Template.instance().toDisplay.set(Template.instance().toDisplay.get() + 1);
-    return Template.instance().toDisplay.get();
-  },
-
-
   queryOutputArray: function(){
-    return [{
-        "queryName": 1234,
-        "time": 1122,
-        "path": "qwertyuiy",
-        "edges":[{
-          "vertexName":"qweasdfasdrty",
-          "instructions": "go fk yoursekf"
-        },{
-          "vertexName":"qwasdfaerty",
-          "instructions": "go fasdfasfk yoursekf"
-        },{
-          "vertexName":"qwafsdfaerty",
-          "instructions": "go fasdfafk yoursekf"
-        }]
+    return ans;
 
-    },{
-        "queryName": 3456,
-        "time": 1223411,
-        "path": "asdfghjkk",
-        "edges":[{
-          "vertexName":"E901823",
-          "instructions": "go fk yoursekf"
-        },{
-          "vertexName":"E9018aasdfsdfas23",
-          "instructions": "go fasasdfdfasfk yoursekf"
-        },{
-          "vertexName":"E90dfsdf1823",
-          "instructions": "go fasdasdffafk yoursekf"
-        }]
-    },{
-        "queryName": 6789,
-        "time": 121234,
-        "path": "zxcvvbnvm",
-        "edges":[{
-          "vertexName":"qweE123rsdfty",
-          "instructions": "go fk asdfyoursekf"
-        },{
-          "vertexName":"qwsfer12312ty",
-          "instructions": "go fasdfasfk yoursekf"
-        },{
-          "vertexName":"qwer12312ty",
-          "instructions": "go fasdfafk yoursekf"
-        }]
-    }]
   },
 
 });
@@ -93,6 +45,8 @@ Template.navigation.events({
       isValidLocation(endLocation)) {
 
       Bert.alert("Calculations done", "success", "growl-top-right");
+      ans = g.getQueryArray(startLocation, endLocation);
+      console.log();
       Template.instance().toDisplay.set(true);
     } else {
       Template.instance().toDisplay.set(false);

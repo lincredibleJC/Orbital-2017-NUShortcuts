@@ -48,12 +48,9 @@ Graph = function() {
             localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].time;
             break;
           case 2:
-            localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].distance;
-            break;
-          case 3:
             localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].stairsWeight;
             break;
-          case 4:
+          case 3:
             localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].shelterRating;
             break; //no default
         };
@@ -79,20 +76,62 @@ Graph = function() {
 
   //takes in 2 vertexes and returns the message of the forward direction
   this.getEdgeDirections = function(fromVert, toVert) {
+    //given that they exist
     return g.vertices[fromVert].edges[toVert].directions;
   };
 
   //takes in 2 vertexes and returns array of links of the forward direction
-  this.getEdgeImageLinks = function(fromVert, toVert) {
-    return g.vertices[fromVert].edges[toVert].imageLink;
+  this.getEdgeImageLink = function(fromVert, toVert) {
+    //given that they exist
+    return g.vertices[fromVert].edges[toVert].imageLink[0];
   };
 
-  //takes in the start and finish location then outputs the path and time taken
+  //takes in a path and returns edge data ni an array
+  this.getEdgeArray = function(path) {
+    var edgeArray = [];
+    for (var  i = 0; i<path.length-1; i++){//-1 for last vertex
+      edgeArray.push({
+        "vertexName": path[i] ,
+        "vertexNameNoSpaces": path[i].replace(/\s/g, '') ,
+        "instructions": g.getEdgeDirections(path[i], path[i+1]) ,
+        "link": g.getEdgeImageLink(path[i], path[i+1])
+      });
+    }
+    return edgeArray;
+  }
+
+  //takes in the start and finish location and outputs query data in a wrapper
   this.getQueryOutput = function(start, finish, queryNum) {
-    var path, time;
-    path = g.shortestPath(start, finish, queryNum);
-    time = g.getPathtime(path);
-    return (path + " : " + Math.ceil(time) + " min")
+    var path, time, queryName;
+    switch (queryNum) {
+      case 1:
+        queryName = "Fastest Route";
+        break;
+      case 2:
+        queryName = "Least Stairs Route";
+        break;
+      case 3:
+        queryName = "Most Sheltered Route";
+    }
+    var path = g.shortestPath(start, finish, queryNum);
+    var time = Math.ceil(g.getPathtime(path));
+    var wrapper = {
+      "queryName": queryName,
+      "queryNameNoSpaces": queryName.replace(/\s/g, ''),
+      "time": time,
+      "path": path.toString(),
+      "edges": g.getEdgeArray(path)
+    };
+    return wrapper
+  }
+
+  //returns array of all the query outputs
+  this.getQueryArray = function(start, finish){
+    var queryArray = [];
+    for (var i=1; i<=3; i++){
+      queryArray.push(g.getQueryOutput(start, finish, i));
+    }
+    return queryArray;
   }
 
 };

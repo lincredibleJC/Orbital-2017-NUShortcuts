@@ -6,21 +6,18 @@
         <h4>Mode of Transport</h4>
         <label for="transportMode" class="sr-only">Mode of Transport</label>
         <select name="transportMode" id="transportMode" class="form-control">
-          <option value="Walking only">Walking only</option>
-          <option value="Walking and bus">Walking and bus</option>
+          {{#each transportList}}
+              <option value="{{transportMode}}" {{transportSelection}}>{{transportMode}}</option>
+          {{/each}}
         </select>
         <br>
 
         <h4>Your walking speed</h4>
         <label for="walkingSpeed" class="sr-only">Your walking speed</label>
         <select name="walkingSpeed" id="walkingSpeed" class="form-control">
-          <option value="0.013">Snail's pace</option>
-          <option value="1.2">Slightly slower than average</option>
-          <option value="1.4">Average walking pace</option>
-          <option value="6">Slightly faster than average</option>
-          <option value="2.2">Racewalking</option>
-          <option value="3">Running speed</option>
-          <option value="12.42">Usain Bolt</option>
+          {{#each speedList}}
+              <option value="{{speed}}" {{speedSelection}}>{{description}}</option>
+          {{/each}}
         </select>
         <br>
 

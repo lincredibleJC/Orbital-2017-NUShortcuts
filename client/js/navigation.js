@@ -18,12 +18,11 @@ Template.navigation.helpers({
   },
 
   queryOutputArray: function(){
+    //warning, global variable
     return ans;
-
   },
 
 });
-
 
 //Warning Direct access to global variable
 Template.registerHelper('arrayify', function(obj) {
@@ -45,6 +44,7 @@ Template.navigation.events({
       isValidLocation(endLocation)) {
 
       Bert.alert("Calculations done", "success", "growl-top-right");
+      //warning, global variable
       ans = g.getQueryArray(startLocation, endLocation);
       console.log();
       Template.instance().toDisplay.set(true);

@@ -25,23 +25,48 @@ Template.navigation.helpers({
 
   queryOutputArray: function(){
     return [{
-        "queryName": "asdfas",
+        "queryName": 1234,
         "time": 1122,
-        "path": "asdf,asdfafs, asdfsdf, asdfasda,sdf asfd",
-        "vertexName":"E901823",
-        "instructions": "go fk yoursekf"
+        "path": "qwertyuiy",
+        "edges":[{
+          "vertexName":"qweasdfasdrty",
+          "instructions": "go fk yoursekf"
+        },{
+          "vertexName":"qwasdfaerty",
+          "instructions": "go fasdfasfk yoursekf"
+        },{
+          "vertexName":"qwafsdfaerty",
+          "instructions": "go fasdfafk yoursekf"
+        }]
+
     },{
-        "queryName": "df",
+        "queryName": 3456,
         "time": 1223411,
-        "path": "asdfsdf,aasdfaasdf",
-        "vertexName":"E9dasfa1823",
-        "instructions": "go fk yourdsekf"
+        "path": "asdfghjkk",
+        "edges":[{
+          "vertexName":"E901823",
+          "instructions": "go fk yoursekf"
+        },{
+          "vertexName":"E9018aasdfsdfas23",
+          "instructions": "go fasasdfdfasfk yoursekf"
+        },{
+          "vertexName":"E90dfsdf1823",
+          "instructions": "go fasdasdffafk yoursekf"
+        }]
     },{
-        "queryName": "aasfasdfsdfas",
+        "queryName": 6789,
         "time": 121234,
-        "path": "asdasdfasdf,asasdfdf",
-        "vertexName":"E9011234823",
-        "instructions": "go fk yoursekf"
+        "path": "zxcvvbnvm",
+        "edges":[{
+          "vertexName":"qweE123rsdfty",
+          "instructions": "go fk asdfyoursekf"
+        },{
+          "vertexName":"qwsfer12312ty",
+          "instructions": "go fasdfasfk yoursekf"
+        },{
+          "vertexName":"qwer12312ty",
+          "instructions": "go fasdfafk yoursekf"
+        }]
     }]
   },
 

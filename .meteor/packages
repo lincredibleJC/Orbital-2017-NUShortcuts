@@ -34,3 +34,4 @@ easysearch:elasticsearch
 easysearch:autosuggest
 dburles:google-maps
 mdg:geolocation
+u2622:persistent-session

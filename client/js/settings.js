@@ -7,58 +7,29 @@ Template.settings.rendered = function() {
 }
 
 Template.settings.events({
-  "change .transportMode": function(event) {
-    var transportMode = event.target.transportMode.value;
+  "click .settings": function(event) {//for debugging
+    console.log("Clicked");
+  },
 
-    if (isNotEmpty(transportMode) & isValidTransport(transportMode)) {
-
-      //TODO: link to the list of locations
-      //TODO: return location info
-      //TODO: return Listof rooms
-    }
-
+  "change #transportMode": function(event) {
+    var newValue = event.target.value;
+    Session.setPersistent("transportMode", newValue)
     return false; //prevent submitting of form
   },
-  /*
-    "change .walkingSpeed":function(event){
-      var newSpeed = event.target.walkingSpeed.value;
 
-      if(isNotEmpty(locationToFind) & isValidNumber(newSpeed)){
+  "change #walkingSpeed": function(event) {
+    var newValue = event.target.value;//integer value
+    Session.setPersistent("walkingSpeed", newValue)
+    console.log(event.target.selectedIndex);
+    console.log(event.target.length);
+    return false; //prevent submitting of form
+  },
 
-        //TODO: link to the map CRUD to change data
-      }
+  'change input': function(event) {
+    var newValue = event.target.checked;//integer value
+    Session.setPersistent("darkMode", newValue)
+    console.log(event.target.checked);
+    return false; //prevent submitting of form
+ }
 
-      return false;//prevent submitting of form
-    }
-  */
 });
-
-//Validation Rules
-
-var isNotEmpty = function(value) {
-  if (value && value !== '') {
-    return true;
-  }
-  Bert.alert("Please fill in the fields", "danger", "growl-top-right");
-  return false;
-};
-
-// Validate transport mode
-isValidTransport = function(value) {
-  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  if (filter.test(value)) {
-    return true;
-  }
-  Bert.alert("Please choose a valid mod of transport", "danger", "growl-top-right");
-  return false;
-};
-
-// Validate speed
-isValidNumber = function(value) {
-  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  if (filter.test(value)) {
-    return true;
-  }
-  Bert.alert("Please uenter a valid number", "danger", "growl-top-right");
-  return false;
-};

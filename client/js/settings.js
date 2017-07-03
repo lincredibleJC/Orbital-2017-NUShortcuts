@@ -1,26 +1,23 @@
 Template.settings.rendered = function() {
   $("#settings-link").addClass('selected');
-  $("#navigation-link").removeClass('selected');
-  $("#locationSearch-link").removeClass('selected');
-  $("#popularLocations-link").removeClass('selected');
-  $("#map-link").removeClass('selected');
+  $("#navigation-link,#map-link,#locationSearch-link,#popularLocations-link").removeClass('selected');
 }
 
 Template.settings.helpers({
   transportSelection: function() {
-    return (Session.get("transportMode") == this.transportMode) ? 'selected' : '';
+    return (Session.get("transportMode") === this.transportMode) ? 'selected' : '';
   },
 
   speedSelection: function() {
-    return (Session.get("walkingSpeed") == this.speed) ? 'selected' : '';
+    return (Session.get("walkingSpeed") === this.speed) ? 'selected' : '';
   },
 
   transportList: function() {
     return [{
-        "transportMode": "Walking only",
+        "transportMode": "Walking only"
       },
       {
-        "transportMode": "Walking and bus",
+        "transportMode": "Walking and bus"
       }
     ]
   },

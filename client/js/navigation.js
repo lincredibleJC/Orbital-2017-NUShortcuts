@@ -1,9 +1,7 @@
 Template.navigation.onRendered(function() {
   $("#navigation-link").addClass('selected');
-  $("#settings-link").removeClass('selected');
-  $("#locationSearch-link").removeClass('selected');
-  $("#popularLocations-link").removeClass('selected');
-  $("#map-link").removeClass('selected');
+  $("#map-link,#locationSearch-link,#popularLocations-link,#settings-link").removeClass('selected');
+
 
 });
 

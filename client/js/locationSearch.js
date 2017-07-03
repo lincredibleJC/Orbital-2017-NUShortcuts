@@ -1,9 +1,6 @@
 Template.locationSearch.onRendered(function() {
   $("#locationSearch-link").addClass('selected');
-  $("#navigation-link").removeClass('selected');
-  $("#settings-link").removeClass('selected');
-  $("#popularLocations-link").removeClass('selected');
-  $("#map-link").removeClass('selected');
+  $("#navigation-link,#map-link,#popularLocations-link,#settings-link").removeClass('selected');
 });
 
 Template.locationSearch.events({

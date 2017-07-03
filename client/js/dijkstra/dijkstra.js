@@ -9,7 +9,7 @@ Graph = function() {
   this.shortestPath = function(start, finish, queryNum) {
     var nodes = new PriorityQueue(),
       path = [],
-      smallest, v, e, localWeight;
+      smallest, v, e, localWeight, weightUsed;
 
     for (v in this.vertices) {
 
@@ -42,18 +42,18 @@ Graph = function() {
       }
 
       for (e in this.vertices[smallest].edges) {
-        var localWeight;
         switch (queryNum) {
           case 1:
-            localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].time;
+             weightUsed = this.vertices[smallest].edges[e].time;
             break;
           case 2:
-            localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].stairsWeight;
+             weightUsed = this.vertices[smallest].edges[e].stairsWeight;
             break;
           case 3:
-            localWeight = this.vertices[smallest].weight + this.vertices[smallest].edges[e].shelterRating;
+             weightUsed = this.vertices[smallest].edges[e].shelterRating;
             break; //no default
-        };
+        }
+        localWeight = this.vertices[smallest].weight + weightUsed;
 
         if (localWeight < this.vertices[e].weight) {
           this.vertices[e].weight = localWeight;
@@ -113,8 +113,8 @@ Graph = function() {
       case 3:
         queryName = "Most Sheltered Route";
     }
-    var path = g.shortestPath(start, finish, queryNum);
-    var time = Math.ceil(g.getPathtime(path));
+    path = g.shortestPath(start, finish, queryNum);
+    time = Math.ceil(g.getPathtime(path));
     var wrapper = {
       "queryName": queryName,
       "queryNameNoSpaces": queryName.replace(/\s/g, ''),

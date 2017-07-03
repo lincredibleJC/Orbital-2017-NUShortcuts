@@ -5,14 +5,7 @@ Template.locationSearch.onRendered(function() {
   $("#popularLocations-link").removeClass('selected');
   $("#map-link").removeClass('selected');
 });
-//Warning Direct access to global variable
-Template.registerHelper('arrayify', function(obj) {
-  var result = [];
-  for (var key in finalMap) result.push({
-    name: key
-  });
-  return result;
-});
+
 Template.locationSearch.events({
   "submit .locationSearch": function(event) {
     var locationToFind = trimInput(event.target.locationToFind.value);

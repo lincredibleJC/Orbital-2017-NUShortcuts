@@ -9,7 +9,8 @@ Template.settings.helpers({
   },
 
   speedSelection: function() {
-    return (Session.get("walkingSpeed") === this.speed) ? 'selected' : '';
+    //this one must use == instead of ===, and I don't know why
+    return (Session.get("walkingSpeed") == this.speed) ? 'selected' : '';
   },
 
   transportList: function() {

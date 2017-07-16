@@ -1,17 +1,26 @@
 <template name="locationDetails">
-  <div class="locationDetails display" style="visibility: hidden">
+  <div class="locationDetails display">
     <div class="row">
       <div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
-        <h2 class="display-title" id="locationName">Location Name</h2>
+        <h2 class="display-title">{{locationName}}</h2>
         <br>
-        <img src="https://speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2010/03/four-oh-four_16.jpg" alt="">
-        <h4 class="meta" id="faculty">Faculty</h4>
+        <img src="https://speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2010/03/four-oh-four_16.jpg" alt="https://speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2010/03/four-oh-four_16.jpg">
+        <h5 class="meta">Faculty: {{faculty}}</h5>
         <br>
-        <h4 class="meta" id="coordinates">Latitude and Longitude</h4>
+        <h5 class="meta">Latitude: {{latitude}}</h5>
+        <h5 class="meta">Longitude: {{longitude}}</h5>
         <br>
-        <h4 class="meta" id="roomList">Places inside</h4>
+        <h5 class="meta">List of Rooms:</h5>
         <br>
-        <h4 class="meta" id="edges">Where can I go from here?</h4>
+          {{#each roomNames}}
+            <h5 class="meta">{{this}}</h5>
+          {{/each}}
+        <br>
+        <h5 class="meta">Places you can go to from here:</h5>
+        <br>
+          {{#each edgeNames}}
+            <h5 class="meta">{{this}}</h5>
+          {{/each}}
       </div>
     </div>
   </div>

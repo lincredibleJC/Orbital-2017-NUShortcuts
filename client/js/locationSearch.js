@@ -1,6 +1,23 @@
 Template.locationSearch.onRendered(function() {
   $("#locationSearch-link").addClass('selected');
   $("#navigation-link,#map-link,#popularLocations-link,#settings-link").removeClass('selected');
+
+});
+
+Template.locationSearch.onCreated(() => {
+  let template = Template.instance();
+  template.toDisplay = new ReactiveVar(false); //holds current value of search input
+  Session.set("locationData", null);
+});
+
+Template.locationSearch.helpers({
+  toDisplay: function() {
+    return Template.instance().toDisplay.get();
+  },
+  locationData: function() {
+    return Session.get("locationData");
+  },
+
 });
 
 Template.locationSearch.events({
@@ -11,31 +28,27 @@ Template.locationSearch.events({
       isValidLocation(locationToFind)) {
       Bert.alert("Location found", "success", "growl-top-right");
 
-      //render the location details
+      //process the data for the vertex
       var v = finalMap[locationToFind];
-      $('#locationName').text(locationToFind);
-      $('#faculty').text("Faculty: " + v.faculty);
-      //coordinates
-      var coordinates = v.latlongCoordinates;
-      $('#coordinates').text("Latitude: " + coordinates[0])
-      $('#coordinates').append("<br />" + "Longitude: " + coordinates[1]);
-      //roomList
-      $('#roomList').text("List of Rooms: ").append("<br />");
-      for(room in v.roomList){
-        $('#roomList').append("<br />" + v.roomList[room]);
+      v.locationName = locationToFind;
+      v.latitude = v.latlongCoordinates[0];
+      v.longitude = v.latlongCoordinates[1];
+      v.roomNames = [];
+      for (room in v.roomList) {
+        v.roomNames.push(room);
       }
-      //edges
-      $('#edges').text("Places you can go to from here:").append("<br />");
-      for(edge in v.edges){
-        $('#edges').append("<br />" + edge);
+      v.edgeNames = [];
+      for (edge in v.edges) {
+        v.edgeNames.push(edge);
       }
+      console.log(v.edgeNames);
+      Session.set("locationData", v);
 
-      //shows the location details layout
-      $(".locationDetails").css('visibility', 'visible');
-
+      // //shows the location details layout
+      Template.instance().toDisplay.set(true);
     } else {
       //shows the location details layout
-      $(".locationDetails").css('visibility', 'hidden');
+      Template.instance().toDisplay.set(false);
     }
 
     //keeps the input inside the field

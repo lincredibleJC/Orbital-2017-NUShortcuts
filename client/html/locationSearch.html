@@ -18,6 +18,9 @@
 		</center>
   </div>
   <br>
-  {{> locationDetails}}
+
+  {{#if toDisplay}}
+    {{> locationDetails locationData}}
+  {{/if}}
 
 </template>

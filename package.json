@@ -1,0 +1,27 @@
+{
+  "name": "orbital-2017-nushortcuts",
+  "version": "1.0.0",
+  "description": "Mobile application to provide step by step picture guides to for shortcuts around NUS.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lincredibleJC/Orbital-2017-NUShortcuts.git"
+  },
+  "author": "Lin Jiachao, Khaw Yew Onn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lincredibleJC/Orbital-2017-NUShortcuts/issues"
+  },
+  "homepage": "https://github.com/lincredibleJC/Orbital-2017-NUShortcuts#readme"
+}

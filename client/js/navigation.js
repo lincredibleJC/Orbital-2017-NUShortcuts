@@ -8,6 +8,7 @@ Template.navigation.onRendered(function() {
 Template.navigation.onCreated(() => {
   let template = Template.instance();
   template.toDisplay = new ReactiveVar(false); //holds current value of search input
+  Session.set("output", null);
 });
 
 Template.navigation.helpers({
@@ -16,8 +17,7 @@ Template.navigation.helpers({
   },
 
   queryOutputArray: function(){
-    //warning, global variable
-    return ans;
+    return Session.get("output");
   },
 
 });
@@ -33,9 +33,8 @@ Template.navigation.events({
       isValidLocation(endLocation)) {
 
       Bert.alert("Calculations done", "success", "growl-top-right");
-      //warning, global variable
-      ans = g.getQueryArray(startLocation, endLocation);
-      console.log();
+
+      Session.set("output", g.getQueryArray(startLocation, endLocation));
       Template.instance().toDisplay.set(true);
     } else {
       Template.instance().toDisplay.set(false);

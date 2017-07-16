@@ -81,9 +81,9 @@ Graph = function() {
   };
 
   //takes in 2 vertexes and returns array of links of the forward direction
-  this.getEdgeImageLink = function(fromVert, toVert) {
+  this.getEdgeimagelinks = function(fromVert, toVert) {
     //given that they exist
-    return g.vertices[fromVert].edges[toVert].imageLink[0];
+    return g.vertices[fromVert].edges[toVert].imagelinks;
   };
 
   //takes in a path and returns edge data ni an array
@@ -94,7 +94,7 @@ Graph = function() {
         "vertexName": path[i] ,
         "vertexNameNoSpaces": path[i].replace(/\s/g, '') ,
         "instructions": g.getEdgeDirections(path[i], path[i+1]) ,
-        "link": g.getEdgeImageLink(path[i], path[i+1])
+        "imageLinks": g.getEdgeimagelinks(path[i], path[i+1])
       });
     }
     return edgeArray;

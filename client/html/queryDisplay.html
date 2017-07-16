@@ -15,21 +15,22 @@
           <ul class="list-group">
             {{#each edges}}
             <!--loop each edge in path-->
-           <li class="list-group-item meta" >
-             <div class="display">
-               <a class="meta" data-toggle="collapse" href="#{{../queryNameNoSpaces}}{{vertexNameNoSpaces}}">{{vertexName}} | {{instructions}}</a>
-               <!--collapses to shop image-->
-               <!-- ../ accesses parent context-->
-               <div id="{{../queryNameNoSpaces}}{{vertexNameNoSpaces}}" class="panel-collapse collapse">
-                 <br>
-                 <img src={{link}} alt="https://pics.onsizzle.com/oops-image-not-found-meme-2895834.png">
-               </div>
-              <!--ends here-->
+            <li class="list-group-item meta">
+              <div class="display">
+                <a class="meta" data-toggle="collapse" href="#{{../queryNameNoSpaces}}{{vertexNameNoSpaces}}">{{vertexName}} | {{instructions}}</a>
+                <!--collapses to shop image-->
+                <!-- ../ accesses parent context-->
+                <div id="{{../queryNameNoSpaces}}{{vertexNameNoSpaces}}" class="panel-collapse collapse">
+                  {{#each imageLinks}}
+                  <br>
+                  <img src={{this}} alt="Oops this image doesn't exist yet"> {{/each}}
+                </div>
+                <!--ends here-->
 
-             </div>
-           </li>
-           {{/each}}
-         </ul>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
         </div>
         <!-- Collapsible path display ends here-->
 

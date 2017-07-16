@@ -26,6 +26,7 @@ iron:router
 themeteorchef:bert
 accounts-base
 accounts-password
+npm-bcrypt
 session
 
 meteortoys:allthings

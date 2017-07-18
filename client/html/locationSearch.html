@@ -8,7 +8,7 @@
 				<label for="locationToFind" class="sr-only">Location search</label>
         <input list="locations" name="locationToFind" id="locationToFind" class="form-control" placeholder="Type name of location">
         <datalist id="locations">
-          {{#each onlyBuildings myobject}}
+          {{#each onlyBuildings}}
             <option value="{{name}}"></option>
           {{/each}}
         </datalist>

@@ -8,7 +8,7 @@
         <label for="startLocation" class="sr-only">Starting Location</label>
         <input list="locations" name="startLocation" id="startLocation" class="form-control" placeholder="Choose starting location">
         <datalist id="locations">
-          {{#each allLocations myobject}}
+          {{#each allLocations}}
             <option value="{{name}}"></option>
           {{/each}}
         </datalist>
@@ -16,7 +16,7 @@
         <label for="endLocation" class="sr-only">End Location</label>
         <input list="locations" name="endLocation" id="endLocation" class="form-control" placeholder="Choose destination">
         <datalist id="locations">
-          {{#each allLocations myobject}}
+          {{#each allLocations}}
             <option value="{{name}}"></option>
           {{/each}}
         </datalist>

@@ -26,25 +26,21 @@ Template.locationSearch.events({
 
     if (isNotEmpty(locationToFind) &&
       isValidLocation(locationToFind)) {
+
       Bert.alert("Location found", "success", "growl-top-right");
 
       //process the data for the vertex
-      var v = finalMap[locationToFind];
-      v.locationName = locationToFind;
-      v.latitude = v.latlongCoordinates[0];
-      v.longitude = v.latlongCoordinates[1];
-      v.roomNames = [];
-      for (room in v.roomList) {
-        v.roomNames.push(room);
+      var vertex = localMap[locationToFind];
+      vertex.latitude = vertex.coordinates[0];
+      vertex.longitude = vertex.coordinates[1];
+      vertex.edgeNames = [];
+      for (edge in vertex.edges) {
+          vertex.edgeNames.push(edge);
       }
-      v.edgeNames = [];
-      for (edge in v.edges) {
-        v.edgeNames.push(edge);
-      }
-      console.log(v.edgeNames);
-      Session.set("locationData", v);
+      Session.set("locationData", vertex);
+      console.log(JSON.stringify(vertex));//for debugging
 
-      // //shows the location details layout
+      //shows the location details layout
       Template.instance().toDisplay.set(true);
     } else {
       //shows the location details layout
@@ -74,9 +70,9 @@ var isNotEmpty = function(value) {
 };
 
 // Check of locations in location fields exist
-// Warning: direct access to finalMap
+// Warning: direct access to map
 var isValidLocation = function(location) {
-  if (!finalMap[location]) {
+  if (!localMap[location]) {
     Bert.alert("Location does not exist", "danger", "growl-top-right");
     return false;
   }

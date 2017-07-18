@@ -8,7 +8,7 @@ Template.navigation.onRendered(function() {
 Template.navigation.onCreated(() => {
   let template = Template.instance();
   template.toDisplay = new ReactiveVar(false); //holds current value of search input
-  Session.set("output", null);
+  Session.set("allQueriesData", null);
 });
 
 Template.navigation.helpers({
@@ -17,7 +17,7 @@ Template.navigation.helpers({
   },
 
   queryOutputArray: function(){
-    return Session.get("output");
+    return Session.get("allQueriesData");
   },
 
 });
@@ -34,7 +34,7 @@ Template.navigation.events({
 
       Bert.alert("Calculations done", "success", "growl-top-right");
 
-      Session.set("output", g.getQueryArray(startLocation, endLocation));
+      Session.set("allQueriesData", g.getQueryArray(startLocation, endLocation));
       Template.instance().toDisplay.set(true);
     } else {
       Template.instance().toDisplay.set(false);
@@ -64,7 +64,7 @@ var isNotEmpty = function(value) {
 // Check of locations in location fields exist
 // Warning: direct access to finalMap
 var isValidLocation = function(location) {
-  if (!finalMap[location]) {
+  if (!localMap[location]) {
     Bert.alert("Location does not exist", "danger", "growl-top-right");
     return false;
   }

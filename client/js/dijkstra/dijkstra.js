@@ -2,8 +2,8 @@
 // Pathfinding starts here //
 /////////////////////////////
 Graph = function() {
-  //copies over from finalMap
-  this.vertices = finalMap;
+  //copies over from localMap
+  this.vertices = localMap;
 
   //takes in start and end location and quiery number and returns the path
   this.shortestPath = function(start, finish, queryNum) {
@@ -41,16 +41,16 @@ Graph = function() {
         continue;
       }
 
-      for (e in this.vertices[smallest].edges) {
+      for (e in this.vertices[smallest].edgeList) {
         switch (queryNum) {
           case 1:
-             weightUsed = this.vertices[smallest].edges[e].time;
+             weightUsed = this.vertices[smallest].edgeList[e].time;
             break;
           case 2:
-             weightUsed = this.vertices[smallest].edges[e].stairsWeight;
+             weightUsed = this.vertices[smallest].edgeList[e].stairsWeight;
             break;
           case 3:
-             weightUsed = this.vertices[smallest].edges[e].shelterRating;
+             weightUsed = this.vertices[smallest].edgeList[e].shelterWeight;
             break; //no default
         }
         localWeight = this.vertices[smallest].weight + weightUsed;
@@ -69,35 +69,35 @@ Graph = function() {
   this.getPathtime = function(path) {
     var time = 0;
     for (var i = 0; i < path.length - 1; i++) {
-      time += g.vertices[path[i]].edges[path[i + 1]].time;
+      time += g.vertices[path[i]].edgeList[path[i + 1]].time;
     }
     return time;
   };
 
   //takes in 2 vertexes and returns the message of the forward direction
-  this.getEdgeDirections = function(fromVert, toVert) {
+  this.getDirectedEdgeDirections = function(fromVert, toVert) {
     //given that they exist
-    return g.vertices[fromVert].edges[toVert].directions;
+    return g.vertices[fromVert].edgeList[toVert].directions;
   };
 
   //takes in 2 vertexes and returns array of links of the forward direction
-  this.getEdgeimagelinks = function(fromVert, toVert) {
+  this.getDirectedEdgeimagelinks = function(fromVert, toVert) {
     //given that they exist
-    return g.vertices[fromVert].edges[toVert].imagelinks;
+    return g.vertices[fromVert].edgeList[toVert].imagelinks;
   };
 
-  //takes in a path and returns edge data ni an array
-  this.getEdgeArray = function(path) {
-    var edgeArray = [];
+  //takes in a path and returns edge data in an array
+  this.getarrayOfEdges = function(path) {
+    var arrayOfEdges = [];
     for (var  i = 0; i<path.length-1; i++){//-1 for last vertex
-      edgeArray.push({
+      arrayOfEdges.push({
         "vertexName": path[i] ,
         "vertexNameNoSpaces": path[i].replace(/\s/g, '') ,
-        "instructions": g.getEdgeDirections(path[i], path[i+1]) ,
-        "imageLinks": g.getEdgeimagelinks(path[i], path[i+1])
+        "instructions": g.getDirectedEdgeDirections(path[i], path[i+1]) ,
+        "imageLinks": g.getDirectedEdgeimagelinks(path[i], path[i+1])
       });
     }
-    return edgeArray;
+    return arrayOfEdges;
   }
 
   //takes in the start and finish location and outputs query data in a wrapper
@@ -115,14 +115,14 @@ Graph = function() {
     }
     path = g.shortestPath(start, finish, queryNum);
     time = Math.ceil(g.getPathtime(path));
-    var wrapper = {
+    var queryDataWrapper = {
       "queryName": queryName,
       "queryNameNoSpaces": queryName.replace(/\s/g, ''),
       "time": time,
       "path": path.toString(),
-      "edges": g.getEdgeArray(path)
+      "edgeList": g.getarrayOfEdges(path)
     };
-    return wrapper
+    return queryDataWrapper;
   }
 
   //returns array of all the query outputs

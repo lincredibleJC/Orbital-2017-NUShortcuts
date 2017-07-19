@@ -64,10 +64,18 @@ Template.settings.events({
   },
 
   "change #walkingSpeed": function(event) {
-    var newValue = event.target.value; //integer value
-    Session.setPersistent("walkingSpeed", newValue)
-    console.log(event.target.selectedIndex);
-    console.log(event.target.length);
+    var newWalkingSpeed = event.target.value; //integer value
+    Session.setPersistent("walkingSpeed", newWalkingSpeed)
+
+    //modify the localMap data
+    for (vertex in localMap) {
+      for (edge in localMap[vertex].edgeList) {
+        localMap[vertex].edgeList[edge].time = localMap[vertex].edgeList[edge].distance / newWalkingSpeed / 60;
+      }
+    }
+    //reinitialise graph
+    g = new Graph();
+
     return false; //prevent submitting of form
   },
 

@@ -44,13 +44,13 @@ Graph = function() {
       for (e in this.vertices[smallest].edgeList) {
         switch (queryNum) {
           case 1:
-             weightUsed = this.vertices[smallest].edgeList[e].time;
+            weightUsed = this.vertices[smallest].edgeList[e].time;
             break;
           case 2:
-             weightUsed = this.vertices[smallest].edgeList[e].stairsWeight;
+            weightUsed = this.vertices[smallest].edgeList[e].stairsWeight;
             break;
           case 3:
-             weightUsed = this.vertices[smallest].edgeList[e].shelterWeight;
+            weightUsed = this.vertices[smallest].edgeList[e].shelterWeight;
             break; //no default
         }
         localWeight = this.vertices[smallest].weight + weightUsed;
@@ -98,12 +98,12 @@ Graph = function() {
   //takes in a path and returns edge data in an array
   this.getArrayOfEdges = function(path) {
     var arrayOfEdges = [];
-    for (var  i = 0; i<path.length-1; i++){//-1 for last vertex
+    for (var i = 0; i < path.length - 1; i++) { //-1 for last vertex
       arrayOfEdges.push({
-        "vertexName": path[i] ,
-        "vertexNameNoSpaces": path[i].replace(/\s/g, '') ,
-        "instructions": g.getDirectedEdgeDirections(path[i], path[i+1]) ,
-        "imageLinks": g.getDirectedEdgeimagelinks(path[i], path[i+1])
+        "vertexName": path[i],
+        "vertexNameNoSpaces": path[i].replace(/\s/g, ''),
+        "instructions": g.getDirectedEdgeDirections(path[i], path[i + 1]),
+        "imageLinks": g.getDirectedEdgeimagelinks(path[i], path[i + 1])
       });
     }
     return arrayOfEdges;
@@ -137,9 +137,9 @@ Graph = function() {
   }
 
   //returns array of all the query outputs
-  this.getQueryArray = function(start, finish){
+  this.getQueryArray = function(start, finish) {
     var queryArray = [];
-    for (var i=1; i<=3; i++){
+    for (var i = 1; i <= 3; i++) {
       queryArray.push(g.getQueryOutput(start, finish, i));
     }
     return queryArray;
@@ -147,6 +147,15 @@ Graph = function() {
 
 };
 
+
+//makes sure the walking speed is persistent
+var walkingSpeed = Session.get("walkingSpeed");
+//modify the localMap data
+for (vertex in localMap) {
+  for (edge in localMap[vertex].edgeList) {
+    localMap[vertex].edgeList[edge].time = localMap[vertex].edgeList[edge].distance / walkingSpeed / 60;
+  }
+}
 //instantiate graph on startup
 //global variable
 g = new Graph();

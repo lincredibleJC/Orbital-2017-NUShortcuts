@@ -150,12 +150,16 @@ Graph = function() {
 
 //makes sure the walking speed is persistent
 var walkingSpeed = Session.get("walkingSpeed");
-//modify the localMap data
-for (vertex in localMap) {
-  for (edge in localMap[vertex].edgeList) {
-    localMap[vertex].edgeList[edge].time = localMap[vertex].edgeList[edge].distance / walkingSpeed / 60;
+if (walkingSpeed != null){
+  //modify the localMap data
+  for (vertex in localMap) {
+    for (edge in localMap[vertex].edgeList) {
+      localMap[vertex].edgeList[edge].time = localMap[vertex].edgeList[edge].distance / walkingSpeed / 60;
+    }
   }
+  //instantiate graph on startup
+  //global variable
+  g = new Graph();
+}else {
+  Session.setPersistent("walkingSpeed", 1.4);
 }
-//instantiate graph on startup
-//global variable
-g = new Graph();

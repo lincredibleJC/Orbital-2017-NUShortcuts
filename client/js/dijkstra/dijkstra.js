@@ -65,13 +65,22 @@ Graph = function() {
     return path.concat([start]).reverse(); //Adds the start vertex for improved readability
   };
 
-  //takes in a path [array of vertex names], and outputs time taken for taht path
+  //takes in a path [array of vertex names], and outputs time taken for that path
   this.getPathtime = function(path) {
     var time = 0;
     for (var i = 0; i < path.length - 1; i++) {
       time += g.vertices[path[i]].edgeList[path[i + 1]].time;
     }
     return time;
+  };
+
+  //takes in a path [array of vertex names], and outputs distance for that path
+  this.getPathDistance = function(path) {
+    var distance = 0;
+    for (var i = 0; i < path.length - 1; i++) {
+      distance += g.vertices[path[i]].edgeList[path[i + 1]].distance;
+    }
+    return distance;
   };
 
   //takes in 2 vertexes and returns the message of the forward direction
@@ -87,7 +96,7 @@ Graph = function() {
   };
 
   //takes in a path and returns edge data in an array
-  this.getarrayOfEdges = function(path) {
+  this.getArrayOfEdges = function(path) {
     var arrayOfEdges = [];
     for (var  i = 0; i<path.length-1; i++){//-1 for last vertex
       arrayOfEdges.push({
@@ -102,7 +111,7 @@ Graph = function() {
 
   //takes in the start and finish location and outputs query data in a wrapper
   this.getQueryOutput = function(start, finish, queryNum) {
-    var path, time, queryName;
+    var path, time, distance, queryName;
     switch (queryNum) {
       case 1:
         queryName = "Fastest Route";
@@ -115,12 +124,14 @@ Graph = function() {
     }
     path = g.shortestPath(start, finish, queryNum);
     time = Math.ceil(g.getPathtime(path));
+    distance = g.getPathDistance(path);
     var queryDataWrapper = {
       "queryName": queryName,
       "queryNameNoSpaces": queryName.replace(/\s/g, ''),
       "time": time,
+      "distance": distance,
       "path": path.toString(),
-      "edgeList": g.getarrayOfEdges(path)
+      "edgeList": g.getArrayOfEdges(path)
     };
     return queryDataWrapper;
   }

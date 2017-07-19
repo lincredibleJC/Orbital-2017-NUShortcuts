@@ -34,7 +34,7 @@ Template.locationSearch.events({
       vertex.latitude = vertex.coordinates[0];
       vertex.longitude = vertex.coordinates[1];
       vertex.edgeNames = [];
-      for (edge in vertex.edges) {
+      for (edge in vertex.edgeList) {
           vertex.edgeNames.push(edge);
       }
       Session.set("locationData", vertex);

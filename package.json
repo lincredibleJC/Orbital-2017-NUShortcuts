@@ -11,7 +11,8 @@
     "lib": "lib"
   },
   "dependencies": {
-    "babel-runtime": "^6.23.0"
+    "babel-runtime": "^6.23.0",
+    "bcrypt": "^1.0.2"
   },
   "devDependencies": {},
   "repository": {

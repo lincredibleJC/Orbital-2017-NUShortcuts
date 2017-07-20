@@ -159,7 +159,7 @@ if (walkingSpeed != null){
   }
   //instantiate graph on startup
   //global variable
-  g = new Graph();
 }else {
   Session.setPersistent("walkingSpeed", 1.4);
 }
+ g = new Graph();

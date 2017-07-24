@@ -1,6 +1,6 @@
 Template.locationSearch.onRendered(function() {
   $("#locationSearch-link").addClass('selected');
-  $("#navigation-link,#map-link,#popularLocations-link,#settings-link").removeClass('selected');
+  $("#navigation-link,#map-link,#popularLocations-link,#settings-link,#feedback-link").removeClass('selected');
 
 });
 

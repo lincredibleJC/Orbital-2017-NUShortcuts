@@ -74,18 +74,18 @@
 }
 
 /* Link Colors */
-.sidebar-left .sidebar-links a.link-blue {
-  border-color: #2495d0;
-}
-.sidebar-left .sidebar-links a.link-blue i.fa {
-  color: #2495d0;
-}
-
 .sidebar-left .sidebar-links a.link-red {
   border-color: #ec4a4d;
 }
 .sidebar-left .sidebar-links a.link-red i.fa {
   color: #ec4a4d;
+}
+
+.sidebar-left .sidebar-links a.link-orange {
+  border-color: #FFA500;
+}
+.sidebar-left .sidebar-links a.link-orange i.fa {
+  color: #FFA500;
 }
 
 .sidebar-left .sidebar-links a.link-yellow {
@@ -102,12 +102,21 @@
   color: #52b859;
 }
 
+.sidebar-left .sidebar-links a.link-blue {
+  border-color: #2495d0;
+}
+.sidebar-left .sidebar-links a.link-blue i.fa {
+  color: #2495d0;
+}
+
 .sidebar-left .sidebar-links a.link-purple {
   border-color: #915ba2;
 }
 .sidebar-left .sidebar-links a.link-purple i.fa {
   color: #915ba2;
 }
+
+
 
 /* Making the sidebar responsive */
 @media (max-width: 900px) {

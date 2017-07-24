@@ -9,7 +9,7 @@ if (Meteor.isClient) {
    //redner selected property on sidebar
   Template.map.onRendered(function() {
     $("#map-link").addClass('selected');
-    $("#navigation-link,#locationSearch-link,#popularLocations-link,#settings-link").removeClass('selected');
+    $("#navigation-link,#locationSearch-link,#popularLocations-link,#settings-link,#feedback-link").removeClass('selected');
   });
 
   Template.map.onCreated(function() {

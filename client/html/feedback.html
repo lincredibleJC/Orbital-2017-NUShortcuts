@@ -1,0 +1,27 @@
+<template name="feedback">
+
+	{{> feedbackForm}}
+
+	
+
+		<div class="feedback">
+			<div class="row">
+				<div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
+					<h1 class="feedback-title">title</h1>
+					<p class="meta">Author: author</p>
+					<p class="meta">Posted On: date</p>
+				</div>
+				<div class=".col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" id="vote">
+					<img src="laugh.png" class="smiley" id="laugh">
+					<img src="frown.png" class="smiley" id="frown">
+				</div>
+				<div class="row" id="score">
+					<h3 class="count green block">0</h3>
+					<h3 class="count red block">0</h3>
+				</div>
+			</div>
+
+			<p class="regular feedback-desc">"feedbackContent"</p>
+
+		</div>
+</template>

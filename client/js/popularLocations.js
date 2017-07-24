@@ -1,6 +1,6 @@
 Template.popularLocations.rendered = function() {
   $("#popularLocations-link").addClass('selected');
-  $("#navigation-link,#map-link,#locationSearch-link,#settings-link").removeClass('selected');
+  $("#navigation-link,#map-link,#locationSearch-link,#settings-link,#feedback-link").removeClass('selected');
 }
 
 //just shows the top 20 locations

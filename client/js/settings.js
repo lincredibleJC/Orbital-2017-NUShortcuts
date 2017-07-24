@@ -1,6 +1,6 @@
 Template.settings.rendered = function() {
   $("#settings-link").addClass('selected');
-  $("#navigation-link,#map-link,#locationSearch-link,#popularLocations-link").removeClass('selected');
+  $("#navigation-link,#map-link,#locationSearch-link,#popularLocations-link,#feedback-link").removeClass('selected');
 }
 
 Template.settings.helpers({

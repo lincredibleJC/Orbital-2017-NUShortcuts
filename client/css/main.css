@@ -21,7 +21,7 @@ body {
   max-width: 100%;
   padding-top: 40px;
   padding-right: 100px;
-  padding-left: 350px;
+  padding-left: 250px;
   margin:auto;
 }
 /* The main content */
@@ -34,7 +34,6 @@ body {
 }
 
 .block {
-
   /*float: left;*/
     display: inline-block;
 }

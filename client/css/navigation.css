@@ -6,7 +6,6 @@
 }
 
 .display:hover {
-
 	background-color: #3a3a3a;
 }
 
@@ -68,42 +67,4 @@ img {
 	color: #bcbcbc;
 	font-size: 18px;
     line-height: 1.8;
-}
-
-.smiley {
-	width: 50px;
-	padding-left: 10px;
-	padding-right: 10px;
-    -webkit-transition: all 0.5s;
-       -moz-transition: all 0.5s;
-         -o-transition: all 0.5s;
-            transition: all 0.5s;
-}
-
-.smiley:hover {
-	width: 50px;
-	padding-left: 0px;
-	padding-right: 0px;
-    -webkit-transition: all 0.5s;
-       -moz-transition: all 0.5s;
-         -o-transition: all 0.5s;
-            transition: all 0.5s;
-}
-
-#info {
-	padding-left: 20px;
-}
-
-#vote {
-	padding: 10px 20px;
-}
-
-#score {
-	padding-left: 48px;
-}
-
-.count {
-	padding-right: 32px;
-	padding-top: 0px;
-	margin-top: 0px;
 }

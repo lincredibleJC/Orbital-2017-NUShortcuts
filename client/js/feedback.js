@@ -13,11 +13,27 @@ Template.feedback.helpers({
 
 Template.feedback.events({
   "click #agree": function(event, template){
-    Bert.alert("You clicked agree!", "success", "growl-top-right");
+  //find the post
+  var thisFeedback = Feedbacks.findOne({_id: this._id})._id;
+  console.log(thisFeedback);
+  Meteor.call("incAgreeVote", thisFeedback);
+
+  Bert.alert("You clicked agree!", "success", "growl-top-right");
 
   },
-  "click #disagree": function(event, template){
-    Bert.alert("You clicked disagree!", "danger", "growl-top-right");
 
+  "click #disagree": function(event, template){
+  //find the post
+  var thisFeedback = Feedbacks.findOne({_id: this._id})._id;
+  console.log(thisFeedback);
+  Meteor.call("incDisagreeVote", thisFeedback);
+
+  Bert.alert("You clicked disagree!", "success", "growl-top-right");
+
+  },
+
+  "click #delete-feedback": function(){
+    Meteor.call("removeFeedback", this._id);
+    Bert.alert("Your feedback has been deleted.", "success", "growl-top-right");
   }
 });

@@ -1,22 +1,23 @@
 /* FONTS */
-h1, h2, h3, h4, h5, h6, p,{
+
+h1, h2, h3, h4, h5, h6, p, {
   font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-	font-size: 50px;
+  font-size: 50px;
 }
 
 h2 {
-	font-size: 30px;
+  font-size: 30px;
 }
 
 h3 {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 p {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .light {
@@ -38,6 +39,7 @@ p {
 .heavy {
   font-weight: 900
 }
+
 
 /* ==========================================================================
    Colors
@@ -64,38 +66,42 @@ p {
   color: #f7cb5b;
 }
 
+
 /* ==========================================================================
    Mobile styles - Width adjustments
    ========================================================================== */
-/* Landscape phones and down */
-@media (max-width: 480px) {
 
-}
+
+/* Landscape phones and down */
+
+@media (max-width: 480px) {}
+
 
 /* Landscape phone to portrait tablet */
-@media (min-width: 481px) and (max-width: 767px) {
 
-}
+@media (min-width: 481px) and (max-width: 767px) {}
+
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 991px) {
 
-}
+@media (min-width: 768px) and (max-width: 991px) {}
+
 
 /* Desktops and laptops ----------- */
-@media (min-width: 992px) and (max-width: 1199px) {
 
-}
+@media (min-width: 992px) and (max-width: 1199px) {}
+
 
 /* Large screens ----------- */
-@media (min-width: 1200px) and (max-width: 3000px) {
 
-}
+@media (min-width: 1200px) and (max-width: 3000px) {}
+
 
 /* ==========================================================================
    Height adjustments
    ========================================================================== */
-/* Landscape phones and down */
-@media (max-height:  800px) {
 
-}
+
+/* Landscape phones and down */
+
+@media (max-height : 800px) {}

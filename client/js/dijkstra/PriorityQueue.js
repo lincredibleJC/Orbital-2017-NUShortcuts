@@ -6,19 +6,22 @@
 PriorityQueue = function() {
   this._nodes = [];
 
-  this.enqueue = function (priority, key) {
-    this._nodes.push({key: key, priority: priority });
+  this.enqueue = function(priority, key) {
+    this._nodes.push({
+      key: key,
+      priority: priority
+    });
     this.sort();
   };
-  this.dequeue = function () {
+  this.dequeue = function() {
     return this._nodes.shift().key;
   };
-  this.sort = function () {
-    this._nodes.sort(function (a, b) {
+  this.sort = function() {
+    this._nodes.sort(function(a, b) {
       return a.priority - b.priority;
     });
   };
-  this.isEmpty = function () {
+  this.isEmpty = function() {
     return !this._nodes.length;
   };
 }

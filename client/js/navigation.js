@@ -12,13 +12,13 @@ Template.navigation.onCreated(() => {
 });
 
 Template.navigation.helpers({
-  toDisplay: function(){
+  toDisplay: function() {
     return Template.instance().toDisplay.get();
   },
 
-  queryOutputArray: function(){
+  queryOutputArray: function() {
     return Session.get("allQueriesData");
-  },
+  }
 
 });
 

@@ -16,7 +16,7 @@ Template.locationSearch.helpers({
   },
   locationData: function() {
     return Session.get("locationData");
-  },
+  }
 
 });
 
@@ -35,10 +35,12 @@ Template.locationSearch.events({
       vertex.longitude = vertex.coordinates[1];
       vertex.edgeNames = [];
       for (edge in vertex.edgeList) {
+        if (vertex.edgeList.hasOwnProperty(edge)) {
           vertex.edgeNames.push(edge);
+        }
       }
       Session.set("locationData", vertex);
-      console.log(JSON.stringify(vertex));//for debugging
+      console.log(JSON.stringify(vertex)); //for debugging
 
       //shows the location details layout
       Template.instance().toDisplay.set(true);

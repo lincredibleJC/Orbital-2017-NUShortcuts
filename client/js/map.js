@@ -3,10 +3,10 @@ if (Meteor.isClient) {
 
   Meteor.startup(function() {
     //load google maps
-     GoogleMaps.load();
-   });
+    GoogleMaps.load();
+  });
 
-   //redner selected property on sidebar
+  //redner selected property on sidebar
   Template.map.onRendered(function() {
     $("#map-link").addClass('selected');
     $("#navigation-link,#locationSearch-link,#popularLocations-link,#settings-link,#feedback-link").removeClass('selected');
@@ -20,14 +20,14 @@ if (Meteor.isClient) {
       // Create and move the marker when latLng changes.
       self.autorun(function() {
         var latLng = Geolocation.latLng();
-        if (! latLng)
+        if (!latLng)
           return;
 
         // If the marker doesn't yet exist, create it.
-        if (! marker) {
+        if (!marker) {
           marker = new google.maps.Marker({
-          position: new google.maps.LatLng(latLng.lat, latLng.lng),
-          map: map.instance
+            position: new google.maps.LatLng(latLng.lat, latLng.lng),
+            map: map.instance
           });
         }
         // The marker already exists, so we'll just change its position.
@@ -56,10 +56,10 @@ if (Meteor.isClient) {
           center: new google.maps.LatLng(latLng.lat, latLng.lng),
           zoom: MAP_ZOOM
         };
-      }else if (GoogleMaps.loaded()) {//if geolocation fails, Make sure the maps API has loaded
+      } else if (GoogleMaps.loaded()) { //if geolocation fails, Make sure the maps API has loaded
         // Map initialization options
         return {
-          center: new google.maps.LatLng(1.2966, 103.7764),//NUS LatLng
+          center: new google.maps.LatLng(1.2966, 103.7764), //NUS LatLng
           zoom: MAP_ZOOM
         };
       }
@@ -67,12 +67,12 @@ if (Meteor.isClient) {
   });
 
   Template.map.events({
-      'click': function(){
-          console.log("You clicked something");
-          //access maps instance though maps object
-          GoogleMaps.maps.exampleMap.instance;
+    'click': function() {
+      console.log("You clicked something");
+      //access maps instance though maps object
+      GoogleMaps.maps.exampleMap.instance;
 
-      }
+    }
   });
 
 }

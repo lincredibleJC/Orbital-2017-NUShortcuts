@@ -69,8 +69,12 @@ Template.settings.events({
 
     //modify the localMap data
     for (vertex in localMap) {
-      for (edge in localMap[vertex].edgeList) {
-        localMap[vertex].edgeList[edge].time = localMap[vertex].edgeList[edge].distance / newWalkingSpeed / 60;
+      if (localMap.hasOwnProperty(vertex)) {
+        for (edge in localMap[vertex].edgeList) {
+          if (localMap[vertex].edgeList.hasOwnProperty(edge)) {
+            localMap[vertex].edgeList[edge].time = localMap[vertex].edgeList[edge].distance / newWalkingSpeed / 60;
+          }
+        }
       }
     }
     //reinitialise graph

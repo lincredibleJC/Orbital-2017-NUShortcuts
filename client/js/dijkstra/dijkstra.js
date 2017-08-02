@@ -42,23 +42,26 @@ Graph = function() {
       }
 
       for (e in this.vertices[smallest].edgeList) {
-        switch (queryNum) {
-          case 1:
-            weightUsed = this.vertices[smallest].edgeList[e].time;
-            break;
-          case 2:
-            weightUsed = this.vertices[smallest].edgeList[e].stairsWeight;
-            break;
-          case 3:
-            weightUsed = this.vertices[smallest].edgeList[e].shelterWeight;
-            break; //no default
-        }
-        localWeight = this.vertices[smallest].weight + weightUsed;
+        if (this.vertices[smallest].edgeList.hasOwnProperty(e)) {
 
-        if (localWeight < this.vertices[e].weight) {
-          this.vertices[e].weight = localWeight;
-          this.vertices[e].previous = smallest;
-          nodes.enqueue(localWeight, e);
+          switch (queryNum) {
+            case 1:
+              weightUsed = this.vertices[smallest].edgeList[e].time;
+              break;
+            case 2:
+              weightUsed = this.vertices[smallest].edgeList[e].stairsWeight;
+              break;
+            case 3:
+              weightUsed = this.vertices[smallest].edgeList[e].shelterWeight;
+              break; //no default
+          }
+          localWeight = this.vertices[smallest].weight + weightUsed;
+
+          if (localWeight < this.vertices[e].weight) {
+            this.vertices[e].weight = localWeight;
+            this.vertices[e].previous = smallest;
+            nodes.enqueue(localWeight, e);
+          }
         }
       }
     }
@@ -150,16 +153,20 @@ Graph = function() {
 
 //makes sure the walking speed is persistent
 var walkingSpeed = Session.get("walkingSpeed");
-if (walkingSpeed != null){
+if (walkingSpeed !== null) {
   //modify the localMap data
   for (vertex in localMap) {
-    for (edge in localMap[vertex].edgeList) {
-      localMap[vertex].edgeList[edge].time = localMap[vertex].edgeList[edge].distance / walkingSpeed / 60;
+    if (localMap.hasOwnProperty(vertex)) {
+      for (edge in localMap[vertex].edgeList) {
+        if (localMap[vertex].edgeList.hasOwnProperty(edge)) {
+          localMap[vertex].edgeList[edge].time = localMap[vertex].edgeList[edge].distance / walkingSpeed / 60;
+        }
+      }
     }
   }
   //instantiate graph on startup
   //global variable
-}else {
+} else {
   Session.setPersistent("walkingSpeed", 1.4);
 }
- g = new Graph();
+g = new Graph();

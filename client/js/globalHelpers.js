@@ -10,9 +10,11 @@ Template.registerHelper('allLocations', function() {
 //Warning Direct access to global variable
 Template.registerHelper('onlyBuildings', function() {
   var result = [];
-  for (var key in localMap){
+  for (var key in localMap) {
     if (!key.includes("Junction") && !key.includes("Busstop")) {
-      result.push({name: key});
+      result.push({
+        name: key
+      });
     }
   }
   return result;

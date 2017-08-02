@@ -1,70 +1,71 @@
 .display {
-	border: 1px solid #ececec;
-	background-color: #2d2d2d;
-	padding: 10px 20px;
-	margin: 0px 0px 20px 0px;
+  border: 1px solid #ececec;
+  background-color: #2d2d2d;
+  padding: 10px 20px;
+  margin: 0px 0px 20px 0px;
 }
 
 .display:hover {
-	background-color: #3a3a3a;
+  background-color: #3a3a3a;
 }
 
 .display-img {
- 	width: 100%;
- 	max-height: 500px;
- 	color:#fff;
- 	background-repeat:no-repeat;
- 	background-attachment:scroll;
-	background-position:center center;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	background-size:cover;
-	-o-background-size:cover;
+  width: 100%;
+  max-height: 500px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 .display-title {
-	color: lightblue;
-	font-size: 32px;
-	margin: 0px 0px;
-	padding-bottom: 10px;
-	word-wrap: break-word;
+  color: lightblue;
+  font-size: 32px;
+  margin: 0px 0px;
+  padding-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .meta {
-	color: #fff;
-	font-size: 16px;
-	font-weight: 450;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 450;
 }
 
 .list-group-item {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    margin-bottom: -1px;
-    background-color: #13181b;
-    border: 1px solid #ddd;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #13181b;
+  border: 1px solid #ddd;
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
+
 .left {
-    float: left;
-    width: inherit;
-    border: 3px solid #73AD21;
-    padding: 10px;
+  float: left;
+  width: inherit;
+  border: 3px solid #73AD21;
+  padding: 10px;
 }
 
 .right {
-    float: right;
-    width: inherit;
-    border: 3px solid #73AD21;
-    padding: 10px;
+  float: right;
+  width: inherit;
+  border: 3px solid #73AD21;
+  padding: 10px;
 }
 
 .display-desc {
-	color: #bcbcbc;
-	font-size: 18px;
-    line-height: 1.8;
+  color: #bcbcbc;
+  font-size: 18px;
+  line-height: 1.8;
 }

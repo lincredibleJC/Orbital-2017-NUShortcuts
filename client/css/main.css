@@ -1,6 +1,6 @@
-html,
-body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
+html, body {
+  overflow-x: hidden;
+  /* Prevent scroll on narrow devices */
 }
 
 body {
@@ -13,27 +13,33 @@ body {
 
 * {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+
 /* The whole page minus the sidebar */
+
 .main-container {
   max-width: 100%;
   padding-top: 40px;
   padding-right: 100px;
   padding-left: 250px;
-  margin:auto;
+  margin: auto;
 }
+
+
 /* The main content */
+
 .main-content {
   max-width: 600px;
   padding-top: 40px;
   padding-right: 40px;
   padding-left: 40px;
-  margin:auto;
+  margin: auto;
 }
 
 .block {
   /*float: left;*/
-    display: inline-block;
+  display: inline-block;
 }

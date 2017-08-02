@@ -21,18 +21,20 @@ fortawesome:fontawesome
 twbs:bootstrap
 iron:router
 themeteorchef:bert
+
 accounts-base
 accounts-password
 accounts-ui
 artwells:accounts-guest
-
 npm-bcrypt
+
 session
+u2622:persistent-session
 
 meteortoys:allthings
 easy:search
 easysearch:elasticsearch
 easysearch:autosuggest
+
 dburles:google-maps
 mdg:geolocation
-u2622:persistent-session

@@ -1,8 +1,8 @@
 <template name="popularLocations">
   <div class="popularLocations display">
     <center><h2 class="display-title">Here are the most popular locations and routes </h2></center>
-    <h5>(currently shows the first 20 by alphabetical order)</h5>
       <ol>
+        <h5 class="meta">(currently shows the first 20 by alphabetical order)</h5>
         {{#each top20Locations}}
           <li class="meta">{{name}}</li>
           <br>

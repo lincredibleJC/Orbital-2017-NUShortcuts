@@ -44,7 +44,23 @@ Graph = function() {
       for (e in this.vertices[smallest].edgeList) {
         if (this.vertices[smallest].edgeList.hasOwnProperty(e)) {
 
-          switch (queryNum) {
+          if (Session.get("transportMode") == "Walking and bus" && smallest.includes("Busstop") && e.includes("Busstop")){
+            
+            switch (queryNum) {
+            case 1:
+              weightUsed = this.vertices[smallest].edgeList[e].distance/busSpeed/60;//estimate 8m/s for bus
+              break;
+            case 2:
+              weightUsed = 0;
+              break;
+            case 3:
+              weightUsed = 0;
+              break; //no default
+            }
+
+          }else{
+            
+            switch (queryNum) {
             case 1:
               weightUsed = this.vertices[smallest].edgeList[e].time;
               break;
@@ -54,7 +70,10 @@ Graph = function() {
             case 3:
               weightUsed = this.vertices[smallest].edgeList[e].shelterWeight;
               break; //no default
+           }
+
           }
+
           localWeight = this.vertices[smallest].weight + weightUsed;
 
           if (localWeight < this.vertices[e].weight) {
@@ -72,18 +91,26 @@ Graph = function() {
   this.getPathtime = function(path) {
     var time = 0;
     for (var i = 0; i < path.length - 1; i++) {
-      time += g.vertices[path[i]].edgeList[path[i + 1]].time;
+      if (Session.get("transportMode") == "Walking and bus" && path[i].includes("Busstop") && path[i + 1].includes("Busstop")){
+        time += g.vertices[path[i]].edgeList[path[i + 1]].distance/busSpeed/60;
+      }else{
+        time += g.vertices[path[i]].edgeList[path[i + 1]].time;
+      }
     }
-    return time;
+    return Math.ceil(time);
   };
 
   //takes in a path [array of vertex names], and outputs distance for that path
   this.getPathDistance = function(path) {
     var distance = 0;
     for (var i = 0; i < path.length - 1; i++) {
-      distance += g.vertices[path[i]].edgeList[path[i + 1]].distance;
+      if (Session.get("transportMode") == "Walking and bus" && path[i].includes("Busstop") && path[i + 1].includes("Busstop")){
+        distance += 0;
+      }else{
+        distance += g.vertices[path[i]].edgeList[path[i + 1]].distance;
+      }
     }
-    return distance;
+    return Math.ceil(distance);
   };
 
   //takes in 2 vertexes and returns the message of the forward direction
@@ -126,7 +153,7 @@ Graph = function() {
         queryName = "Most Sheltered Route";
     }
     path = g.shortestPath(start, finish, queryNum);
-    time = Math.ceil(g.getPathtime(path));
+    time = g.getPathtime(path);
     distance = g.getPathDistance(path);
     var queryDataWrapper = {
       "queryName": queryName,
@@ -151,6 +178,9 @@ Graph = function() {
 };
 
 
+//Initialising the graph on startup
+
+var busSpeed = 8;//8 m/s is abouts 30km/s
 //makes sure the walking speed is persistent
 var walkingSpeed = Session.get("walkingSpeed");
 if (walkingSpeed !== null) {
@@ -164,8 +194,6 @@ if (walkingSpeed !== null) {
       }
     }
   }
-  //instantiate graph on startup
-  //global variable
 } else {
   Session.setPersistent("walkingSpeed", 1.4);
 }

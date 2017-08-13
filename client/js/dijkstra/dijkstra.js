@@ -122,7 +122,7 @@ Graph = function() {
   //takes in 2 vertexes and returns array of links of the forward direction
   this.getDirectedEdgeimagelinks = function(fromVert, toVert) {
     //given that they exist
-    return g.vertices[fromVert].edgeList[toVert].imagelinks;
+    return g.vertices[fromVert].edgeList[toVert].imageLinks;
   };
 
   //takes in a path and returns edge data in an array
@@ -131,8 +131,9 @@ Graph = function() {
     for (var i = 0; i < path.length - 1; i++) { //-1 for last vertex
       arrayOfEdges.push({
         "vertexName": path[i],
+		"nextVertexName": path[i+1],
         "vertexNameNoSpaces": path[i].replace(/\s/g, ''),
-        "instructions": g.getDirectedEdgeDirections(path[i], path[i + 1]),
+        "directions": g.getDirectedEdgeDirections(path[i], path[i + 1]),
         "imageLinks": g.getDirectedEdgeimagelinks(path[i], path[i + 1])
       });
     }

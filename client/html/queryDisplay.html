@@ -23,22 +23,19 @@
                 <!--collapses to show image-->
                 <!-- ../ accesses parent context-->
                 <a class="meta" data-toggle="collapse" href="#{{../queryNameNoSpaces}}{{vertexNameNoSpaces}}">
-                  {{vertexName}} to next location
+                  {{vertexName}} to {{nextVertexName}}
                   <br>
                 </a>
                 <div id="{{../queryNameNoSpaces}}{{vertexNameNoSpaces}}" class="panel-collapse collapse">
                   <br>
                   <p class="meta">
-                    Directions: Yet to be collected{{directions}}
+                    Directions: {{directions}}
                     <br><br>
-                    images have yet to be collected</p>
-                  <img src="http://pixup.us/upload/small/2013/06/04/51ad91814dd33.jpg" alt="Oops this image doesn't exist yet">
-                  <!--
-                  {{#each imageLinks}}
-                    <br>
-                    <img src={{this}} alt="">
-                  {{/each}}
-                  -->
+					{{#each imageLinks}}
+						<p></p>
+						<img src={{this}} alt="">
+					{{/each}}
+				  </p>
                 </div>
               </div>
               <!--ends here-->

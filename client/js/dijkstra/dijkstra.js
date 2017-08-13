@@ -184,7 +184,10 @@ Graph = function() {
 var busSpeed = 8;//8 m/s is abouts 30km/s
 //makes sure the walking speed is persistent
 var walkingSpeed = Session.get("walkingSpeed");
-if (walkingSpeed !== null) {
+
+if (walkingSpeed == null) {
+  Session.setPersistent("walkingSpeed", 1.4);
+}else{
   //modify the localMap data
   for (vertex in localMap) {
     if (localMap.hasOwnProperty(vertex)) {
@@ -195,7 +198,6 @@ if (walkingSpeed !== null) {
       }
     }
   }
-} else {
-  Session.setPersistent("walkingSpeed", 1.4);
 }
+
 g = new Graph();

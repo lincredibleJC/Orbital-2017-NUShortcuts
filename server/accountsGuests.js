@@ -3,8 +3,8 @@ Meteor.startup(function() {
   AccountsGuest.forced = true;
   AccountsGuest.name = false;
   AccountsGuest.anonymous = true;
-  /* clean out all guest accounts more than 720 hours old (30 days)*/
+  /* clean out all guest accounts more than 35040 hours old (4 years)*/
   var before = new Date();
-  before.setHours(before.getHours() - 720);
+  before.setHours(before.getHours() - 35040);
   Accounts.removeOldGuests(before);
 });

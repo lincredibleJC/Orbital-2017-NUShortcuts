@@ -36,6 +36,12 @@ Template.navigation.events({
 
       Session.set("allQueriesData", g.getQueryArray(startLocation, endLocation));
       Template.instance().toDisplay.set(true);
+
+      var locationId = LocationStats.findOne({locationName : startLocation})._id;
+      Meteor.call("incLocationScore", locationId);
+      
+      locationId = LocationStats.findOne({locationName : endLocation})._id;
+      Meteor.call("incLocationScore", locationId);
     } else {
       Template.instance().toDisplay.set(false);
     }

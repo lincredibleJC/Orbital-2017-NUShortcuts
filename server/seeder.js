@@ -1,23 +1,22 @@
-// Meteor.startup(function() {
-//     // create a date string
-//     var year = new Date().getFullYear();
-//     var month = new Date().getMonth() + 1;
-//     var day = new Date().getDate();
-//     var date = (month + "/" + day + "/" + year).toString();
+Meteor.startup(function() {
 
-//       Feedbacks.insert({
-//         title: "feedbackTitle",
-//         author: "feedbackName",
-//         date: date,
-//         feedback: "feedbackContent",
-//         createdAt: new Date(),
-//         agreeScore: 0,
-//         disagreeScore: 0,
-//         closed: 0
-//       });
+	for (name in localMap){
 
-//       console.log("Feedback Created");
-//       console.log("  ");
-//       console.log("Feedback Database Seeded! Isn't that nice?! :P");
+		var location = LocationStats.findOne({locationName: name});
+		if (!location) {
+			// if location not in db
+	        LocationStats.insert({
+	        	locationName: name,
+	        	locationScore: 0
+	        }, function( error, result) {
+		        if ( error ) console.log ( error ); //info about what went wrong
+		    	if ( result ) console.log ( result ); //the _id of new object if successful
+	 		});
 
-// });
+	 		console.log(name + " created");
+		}
+        
+	}
+
+	console.log("Location DB Updated");
+});

@@ -30,6 +30,12 @@ Template.feedback.events({
       }
     }).voted;
 
+
+    if (userId === thisFeedbackVotes) {
+      Bert.alert("You cannot vote for your own post", "danger", "growl-top-right");
+
+    }
+
     // In the array!, meaning user has voted
     if (thisFeedbackVotes.indexOf(userId) > -1) {
       Bert.alert("You cannot vote twice", "danger", "growl-top-right");
@@ -41,10 +47,6 @@ Template.feedback.events({
 
     }
 
-    if (userId === thisFeedbackVotes) {
-      Bert.alert("You cannot vote for your own post", "danger", "growl-top-right");
-
-    }
 
   },
 

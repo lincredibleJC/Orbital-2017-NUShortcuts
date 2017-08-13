@@ -1,10 +1,9 @@
 <template name="popularLocations">
   <div class="popularLocations display">
-    <center><h2 class="display-title">Here are the most popular locations and routes </h2></center>
+    <center><h2 class="display-title">Here are the locations most commonly travelled to and from</h2></center>
       <ol>
-        <h5 class="meta">(currently shows the first 20 by alphabetical order)</h5>
-        {{#each top20Locations}}
-          <li class="meta">{{name}}</li>
+        {{#each topLocations}}
+          <li class="meta">{{locationName}}</li>
           <br>
         {{/each}}
       </ol>

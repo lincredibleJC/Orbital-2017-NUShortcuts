@@ -10,7 +10,7 @@ $ meteor
 ```
 
 # Description
-Mobile application to provide step by step picture guides to for shortcuts around NUS.
+Web application to provide step by step picture guides to for shortcuts around NUS.
 
 
 # Introduction
